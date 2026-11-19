@@ -1,0 +1,146 @@
+2026-07-29 23:52:09,616 | INFO | Selected 48 graph/diffusion job(s).
+2026-07-29 23:52:09,616 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/real/ENZYMES_g297/uniform_ic_p0.1/aggregate.json
+2026-07-29 23:52:09,616 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/real/ENZYMES_g297/weighted_cascade/aggregate.json
+2026-07-29 23:52:09,617 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/real/bio-CE-LC/uniform_ic_p0.1/aggregate.json
+2026-07-29 23:52:09,617 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/real/bio-CE-LC/weighted_cascade/aggregate.json
+2026-07-29 23:52:09,617 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/real/bn-mouse-kasthuri_graph_v4/uniform_ic_p0.1/aggregate.json
+2026-07-29 23:52:09,617 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/real/bn-mouse-kasthuri_graph_v4/weighted_cascade/aggregate.json
+2026-07-29 23:52:09,617 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/real/gene/uniform_ic_p0.1/aggregate.json
+2026-07-29 23:52:09,617 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/real/gene/weighted_cascade/aggregate.json
+2026-07-29 23:52:09,617 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/real/internet-industry-partnerships/uniform_ic_p0.1/aggregate.json
+2026-07-29 23:52:09,617 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/real/internet-industry-partnerships/weighted_cascade/aggregate.json
+2026-07-29 23:52:09,617 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/real/webkb-wisc/uniform_ic_p0.1/aggregate.json
+2026-07-29 23:52:09,617 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/real/webkb-wisc/weighted_cascade/aggregate.json
+2026-07-29 23:52:09,617 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/synthetic/graph_n1000_m1500/uniform_ic_p0.1/aggregate.json
+2026-07-29 23:52:09,617 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/synthetic/graph_n1000_m1500/weighted_cascade/aggregate.json
+2026-07-29 23:52:09,617 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/synthetic/graph_n100_m150/uniform_ic_p0.1/aggregate.json
+2026-07-29 23:52:09,617 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/synthetic/graph_n100_m150/weighted_cascade/aggregate.json
+2026-07-29 23:52:09,617 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/synthetic/graph_n1100_m1650/uniform_ic_p0.1/aggregate.json
+2026-07-29 23:52:09,617 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/synthetic/graph_n1100_m1650/weighted_cascade/aggregate.json
+2026-07-29 23:52:09,617 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/synthetic/graph_n1200_m1800/weighted_cascade/aggregate.json
+2026-07-29 23:52:09,617 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/synthetic/graph_n1300_m1950/uniform_ic_p0.1/aggregate.json
+2026-07-29 23:52:09,617 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/synthetic/graph_n1300_m1950/weighted_cascade/aggregate.json
+2026-07-29 23:52:09,617 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/synthetic/graph_n1400_m2100/uniform_ic_p0.1/aggregate.json
+2026-07-29 23:52:09,617 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/synthetic/graph_n1400_m2100/weighted_cascade/aggregate.json
+2026-07-29 23:52:09,617 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/synthetic/graph_n1500_m2250/uniform_ic_p0.1/aggregate.json
+2026-07-29 23:52:09,617 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/synthetic/graph_n1500_m2250/weighted_cascade/aggregate.json
+2026-07-29 23:52:09,617 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/synthetic/graph_n1600_m2400/uniform_ic_p0.1/aggregate.json
+2026-07-29 23:52:09,617 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/synthetic/graph_n1600_m2400/weighted_cascade/aggregate.json
+2026-07-29 23:52:09,617 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/synthetic/graph_n1700_m2550/weighted_cascade/aggregate.json
+2026-07-29 23:52:09,617 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/synthetic/graph_n1800_m2700/weighted_cascade/aggregate.json
+2026-07-29 23:52:09,617 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/synthetic/graph_n1900_m2850/uniform_ic_p0.1/aggregate.json
+2026-07-29 23:52:09,617 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/synthetic/graph_n1900_m2850/weighted_cascade/aggregate.json
+2026-07-29 23:52:09,617 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/synthetic/graph_n2000_m3000/uniform_ic_p0.1/aggregate.json
+2026-07-29 23:52:09,617 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/synthetic/graph_n200_m300/uniform_ic_p0.1/aggregate.json
+2026-07-29 23:52:09,617 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/synthetic/graph_n200_m300/weighted_cascade/aggregate.json
+2026-07-29 23:52:09,617 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/synthetic/graph_n300_m450/uniform_ic_p0.1/aggregate.json
+2026-07-29 23:52:09,617 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/synthetic/graph_n300_m450/weighted_cascade/aggregate.json
+2026-07-29 23:52:09,617 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/synthetic/graph_n400_m600/uniform_ic_p0.1/aggregate.json
+2026-07-29 23:52:09,617 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/synthetic/graph_n400_m600/weighted_cascade/aggregate.json
+2026-07-29 23:52:09,617 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/synthetic/graph_n500_m750/uniform_ic_p0.1/aggregate.json
+2026-07-29 23:52:09,617 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/synthetic/graph_n500_m750/weighted_cascade/aggregate.json
+2026-07-29 23:52:09,617 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/synthetic/graph_n600_m900/uniform_ic_p0.1/aggregate.json
+2026-07-29 23:52:09,617 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/synthetic/graph_n600_m900/weighted_cascade/aggregate.json
+2026-07-29 23:52:09,617 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/synthetic/graph_n700_m1050/uniform_ic_p0.1/aggregate.json
+2026-07-29 23:52:09,617 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/synthetic/graph_n700_m1050/weighted_cascade/aggregate.json
+2026-07-29 23:52:09,617 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/synthetic/graph_n800_m1200/uniform_ic_p0.1/aggregate.json
+2026-07-29 23:52:09,617 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/synthetic/graph_n800_m1200/weighted_cascade/aggregate.json
+2026-07-29 23:52:09,617 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/synthetic/graph_n900_m1350/uniform_ic_p0.1/aggregate.json
+2026-07-29 23:52:09,617 | INFO |   /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/Qwen_Qwen3.5-9B/synthetic/graph_n900_m1350/weighted_cascade/aggregate.json
+2026-07-29 23:52:09,620 | INFO | Generating/loading RR sets graph=ENZYMES_g297 diffusion=uniform_ic_p0.1 tool=500 eval=10000
+2026-07-29 23:52:09,662 | INFO | Completed graph=ENZYMES_g297 diffusion=uniform_ic_p0.1 -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/real/ENZYMES_g297/uniform_ic_p0.1/verified_exhaustive.json
+2026-07-29 23:52:09,666 | INFO | Generating/loading RR sets graph=ENZYMES_g297 diffusion=weighted_cascade tool=500 eval=10000
+2026-07-29 23:52:09,707 | INFO | Completed graph=ENZYMES_g297 diffusion=weighted_cascade -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/real/ENZYMES_g297/weighted_cascade/verified_exhaustive.json
+2026-07-29 23:52:09,713 | INFO | Generating/loading RR sets graph=bio-CE-LC diffusion=uniform_ic_p0.1 tool=500 eval=10000
+2026-07-29 23:52:09,757 | INFO | Completed graph=bio-CE-LC diffusion=uniform_ic_p0.1 -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/real/bio-CE-LC/uniform_ic_p0.1/verified_exhaustive.json
+2026-07-29 23:52:09,764 | INFO | Generating/loading RR sets graph=bio-CE-LC diffusion=weighted_cascade tool=500 eval=10000
+2026-07-29 23:52:09,811 | INFO | Completed graph=bio-CE-LC diffusion=weighted_cascade -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/real/bio-CE-LC/weighted_cascade/verified_exhaustive.json
+2026-07-29 23:52:09,816 | INFO | Generating/loading RR sets graph=bn-mouse-kasthuri_graph_v4 diffusion=uniform_ic_p0.1 tool=500 eval=10000
+2026-07-29 23:52:09,855 | INFO | Completed graph=bn-mouse-kasthuri_graph_v4 diffusion=uniform_ic_p0.1 -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/real/bn-mouse-kasthuri_graph_v4/uniform_ic_p0.1/verified_exhaustive.json
+2026-07-29 23:52:09,860 | INFO | Generating/loading RR sets graph=bn-mouse-kasthuri_graph_v4 diffusion=weighted_cascade tool=500 eval=10000
+2026-07-29 23:52:09,908 | INFO | Completed graph=bn-mouse-kasthuri_graph_v4 diffusion=weighted_cascade -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/real/bn-mouse-kasthuri_graph_v4/weighted_cascade/verified_exhaustive.json
+2026-07-29 23:52:09,912 | INFO | Generating/loading RR sets graph=gene diffusion=uniform_ic_p0.1 tool=500 eval=10000
+2026-07-29 23:52:09,957 | INFO | Completed graph=gene diffusion=uniform_ic_p0.1 -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/real/gene/uniform_ic_p0.1/verified_exhaustive.json
+2026-07-29 23:52:09,962 | INFO | Generating/loading RR sets graph=gene diffusion=weighted_cascade tool=500 eval=10000
+2026-07-29 23:52:10,010 | INFO | Completed graph=gene diffusion=weighted_cascade -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/real/gene/weighted_cascade/verified_exhaustive.json
+2026-07-29 23:52:10,013 | INFO | Generating/loading RR sets graph=internet-industry-partnerships diffusion=uniform_ic_p0.1 tool=500 eval=10000
+2026-07-29 23:52:10,057 | INFO | Completed graph=internet-industry-partnerships diffusion=uniform_ic_p0.1 -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/real/internet-industry-partnerships/uniform_ic_p0.1/verified_exhaustive.json
+2026-07-29 23:52:10,061 | INFO | Generating/loading RR sets graph=internet-industry-partnerships diffusion=weighted_cascade tool=500 eval=10000
+2026-07-29 23:52:10,108 | INFO | Completed graph=internet-industry-partnerships diffusion=weighted_cascade -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/real/internet-industry-partnerships/weighted_cascade/verified_exhaustive.json
+2026-07-29 23:52:10,112 | INFO | Generating/loading RR sets graph=webkb-wisc diffusion=uniform_ic_p0.1 tool=500 eval=10000
+2026-07-29 23:52:10,155 | INFO | Completed graph=webkb-wisc diffusion=uniform_ic_p0.1 -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/real/webkb-wisc/uniform_ic_p0.1/verified_exhaustive.json
+2026-07-29 23:52:10,160 | INFO | Generating/loading RR sets graph=webkb-wisc diffusion=weighted_cascade tool=500 eval=10000
+2026-07-29 23:52:10,206 | INFO | Completed graph=webkb-wisc diffusion=weighted_cascade -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/real/webkb-wisc/weighted_cascade/verified_exhaustive.json
+2026-07-29 23:52:10,210 | INFO | Generating/loading RR sets graph=graph_n1000_m1500 diffusion=uniform_ic_p0.1 tool=500 eval=10000
+2026-07-29 23:52:10,238 | INFO | Completed graph=graph_n1000_m1500 diffusion=uniform_ic_p0.1 -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/synthetic/graph_n1000_m1500/uniform_ic_p0.1/verified_exhaustive.json
+2026-07-29 23:52:10,243 | INFO | Generating/loading RR sets graph=graph_n1000_m1500 diffusion=weighted_cascade tool=500 eval=10000
+2026-07-29 23:52:10,297 | INFO | Completed graph=graph_n1000_m1500 diffusion=weighted_cascade -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/synthetic/graph_n1000_m1500/weighted_cascade/verified_exhaustive.json
+2026-07-29 23:52:10,300 | INFO | Generating/loading RR sets graph=graph_n100_m150 diffusion=uniform_ic_p0.1 tool=500 eval=10000
+2026-07-29 23:52:10,333 | INFO | Completed graph=graph_n100_m150 diffusion=uniform_ic_p0.1 -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/synthetic/graph_n100_m150/uniform_ic_p0.1/verified_exhaustive.json
+2026-07-29 23:52:10,337 | INFO | Generating/loading RR sets graph=graph_n100_m150 diffusion=weighted_cascade tool=500 eval=10000
+2026-07-29 23:52:10,376 | INFO | Completed graph=graph_n100_m150 diffusion=weighted_cascade -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/synthetic/graph_n100_m150/weighted_cascade/verified_exhaustive.json
+2026-07-29 23:52:10,381 | INFO | Generating/loading RR sets graph=graph_n1100_m1650 diffusion=uniform_ic_p0.1 tool=500 eval=10000
+2026-07-29 23:52:10,409 | INFO | Completed graph=graph_n1100_m1650 diffusion=uniform_ic_p0.1 -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/synthetic/graph_n1100_m1650/uniform_ic_p0.1/verified_exhaustive.json
+2026-07-29 23:52:10,413 | INFO | Generating/loading RR sets graph=graph_n1100_m1650 diffusion=weighted_cascade tool=500 eval=10000
+2026-07-29 23:52:10,450 | INFO | Completed graph=graph_n1100_m1650 diffusion=weighted_cascade -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/synthetic/graph_n1100_m1650/weighted_cascade/verified_exhaustive.json
+2026-07-29 23:52:10,455 | INFO | Generating/loading RR sets graph=graph_n1200_m1800 diffusion=weighted_cascade tool=500 eval=10000
+2026-07-29 23:52:10,491 | INFO | Completed graph=graph_n1200_m1800 diffusion=weighted_cascade -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/synthetic/graph_n1200_m1800/weighted_cascade/verified_exhaustive.json
+2026-07-29 23:52:10,498 | INFO | Generating/loading RR sets graph=graph_n1300_m1950 diffusion=uniform_ic_p0.1 tool=500 eval=10000
+2026-07-29 23:52:10,541 | INFO | Completed graph=graph_n1300_m1950 diffusion=uniform_ic_p0.1 -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/synthetic/graph_n1300_m1950/uniform_ic_p0.1/verified_exhaustive.json
+2026-07-29 23:52:10,546 | INFO | Generating/loading RR sets graph=graph_n1300_m1950 diffusion=weighted_cascade tool=500 eval=10000
+2026-07-29 23:52:10,600 | INFO | Completed graph=graph_n1300_m1950 diffusion=weighted_cascade -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/synthetic/graph_n1300_m1950/weighted_cascade/verified_exhaustive.json
+2026-07-29 23:52:10,606 | INFO | Generating/loading RR sets graph=graph_n1400_m2100 diffusion=uniform_ic_p0.1 tool=500 eval=10000
+2026-07-29 23:52:10,649 | INFO | Completed graph=graph_n1400_m2100 diffusion=uniform_ic_p0.1 -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/synthetic/graph_n1400_m2100/uniform_ic_p0.1/verified_exhaustive.json
+2026-07-29 23:52:10,654 | INFO | Generating/loading RR sets graph=graph_n1400_m2100 diffusion=weighted_cascade tool=500 eval=10000
+2026-07-29 23:52:10,703 | INFO | Completed graph=graph_n1400_m2100 diffusion=weighted_cascade -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/synthetic/graph_n1400_m2100/weighted_cascade/verified_exhaustive.json
+2026-07-29 23:52:10,709 | INFO | Generating/loading RR sets graph=graph_n1500_m2250 diffusion=uniform_ic_p0.1 tool=500 eval=10000
+2026-07-29 23:52:10,746 | INFO | Completed graph=graph_n1500_m2250 diffusion=uniform_ic_p0.1 -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/synthetic/graph_n1500_m2250/uniform_ic_p0.1/verified_exhaustive.json
+2026-07-29 23:52:10,751 | INFO | Generating/loading RR sets graph=graph_n1500_m2250 diffusion=weighted_cascade tool=500 eval=10000
+2026-07-29 23:52:10,805 | INFO | Completed graph=graph_n1500_m2250 diffusion=weighted_cascade -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/synthetic/graph_n1500_m2250/weighted_cascade/verified_exhaustive.json
+2026-07-29 23:52:10,813 | INFO | Generating/loading RR sets graph=graph_n1600_m2400 diffusion=uniform_ic_p0.1 tool=500 eval=10000
+2026-07-29 23:52:10,856 | INFO | Completed graph=graph_n1600_m2400 diffusion=uniform_ic_p0.1 -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/synthetic/graph_n1600_m2400/uniform_ic_p0.1/verified_exhaustive.json
+2026-07-29 23:52:10,862 | INFO | Generating/loading RR sets graph=graph_n1600_m2400 diffusion=weighted_cascade tool=500 eval=10000
+2026-07-29 23:52:10,908 | INFO | Completed graph=graph_n1600_m2400 diffusion=weighted_cascade -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/synthetic/graph_n1600_m2400/weighted_cascade/verified_exhaustive.json
+2026-07-29 23:52:10,914 | INFO | Generating/loading RR sets graph=graph_n1700_m2550 diffusion=weighted_cascade tool=500 eval=10000
+2026-07-29 23:52:10,953 | INFO | Completed graph=graph_n1700_m2550 diffusion=weighted_cascade -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/synthetic/graph_n1700_m2550/weighted_cascade/verified_exhaustive.json
+2026-07-29 23:52:10,959 | INFO | Generating/loading RR sets graph=graph_n1800_m2700 diffusion=weighted_cascade tool=500 eval=10000
+2026-07-29 23:52:11,015 | INFO | Completed graph=graph_n1800_m2700 diffusion=weighted_cascade -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/synthetic/graph_n1800_m2700/weighted_cascade/verified_exhaustive.json
+2026-07-29 23:52:11,022 | INFO | Generating/loading RR sets graph=graph_n1900_m2850 diffusion=uniform_ic_p0.1 tool=500 eval=10000
+2026-07-29 23:52:11,061 | INFO | Completed graph=graph_n1900_m2850 diffusion=uniform_ic_p0.1 -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/synthetic/graph_n1900_m2850/uniform_ic_p0.1/verified_exhaustive.json
+2026-07-29 23:52:11,067 | INFO | Generating/loading RR sets graph=graph_n1900_m2850 diffusion=weighted_cascade tool=500 eval=10000
+2026-07-29 23:52:11,121 | INFO | Completed graph=graph_n1900_m2850 diffusion=weighted_cascade -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/synthetic/graph_n1900_m2850/weighted_cascade/verified_exhaustive.json
+2026-07-29 23:52:11,129 | INFO | Generating/loading RR sets graph=graph_n2000_m3000 diffusion=uniform_ic_p0.1 tool=500 eval=10000
+2026-07-29 23:52:11,169 | INFO | Completed graph=graph_n2000_m3000 diffusion=uniform_ic_p0.1 -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/synthetic/graph_n2000_m3000/uniform_ic_p0.1/verified_exhaustive.json
+2026-07-29 23:52:11,172 | INFO | Generating/loading RR sets graph=graph_n200_m300 diffusion=uniform_ic_p0.1 tool=500 eval=10000
+2026-07-29 23:52:11,215 | INFO | Completed graph=graph_n200_m300 diffusion=uniform_ic_p0.1 -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/synthetic/graph_n200_m300/uniform_ic_p0.1/verified_exhaustive.json
+2026-07-29 23:52:11,225 | INFO | Generating/loading RR sets graph=graph_n200_m300 diffusion=weighted_cascade tool=500 eval=10000
+2026-07-29 23:52:11,273 | INFO | Completed graph=graph_n200_m300 diffusion=weighted_cascade -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/synthetic/graph_n200_m300/weighted_cascade/verified_exhaustive.json
+2026-07-29 23:52:11,277 | INFO | Generating/loading RR sets graph=graph_n300_m450 diffusion=uniform_ic_p0.1 tool=500 eval=10000
+2026-07-29 23:52:11,324 | INFO | Completed graph=graph_n300_m450 diffusion=uniform_ic_p0.1 -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/synthetic/graph_n300_m450/uniform_ic_p0.1/verified_exhaustive.json
+2026-07-29 23:52:11,328 | INFO | Generating/loading RR sets graph=graph_n300_m450 diffusion=weighted_cascade tool=500 eval=10000
+2026-07-29 23:52:11,373 | INFO | Completed graph=graph_n300_m450 diffusion=weighted_cascade -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/synthetic/graph_n300_m450/weighted_cascade/verified_exhaustive.json
+2026-07-29 23:52:11,377 | INFO | Generating/loading RR sets graph=graph_n400_m600 diffusion=uniform_ic_p0.1 tool=500 eval=10000
+2026-07-29 23:52:11,420 | INFO | Completed graph=graph_n400_m600 diffusion=uniform_ic_p0.1 -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/synthetic/graph_n400_m600/uniform_ic_p0.1/verified_exhaustive.json
+2026-07-29 23:52:11,425 | INFO | Generating/loading RR sets graph=graph_n400_m600 diffusion=weighted_cascade tool=500 eval=10000
+2026-07-29 23:52:11,460 | INFO | Completed graph=graph_n400_m600 diffusion=weighted_cascade -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/synthetic/graph_n400_m600/weighted_cascade/verified_exhaustive.json
+2026-07-29 23:52:11,464 | INFO | Generating/loading RR sets graph=graph_n500_m750 diffusion=uniform_ic_p0.1 tool=500 eval=10000
+2026-07-29 23:52:11,493 | INFO | Completed graph=graph_n500_m750 diffusion=uniform_ic_p0.1 -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/synthetic/graph_n500_m750/uniform_ic_p0.1/verified_exhaustive.json
+2026-07-29 23:52:11,498 | INFO | Generating/loading RR sets graph=graph_n500_m750 diffusion=weighted_cascade tool=500 eval=10000
+2026-07-29 23:52:11,544 | INFO | Completed graph=graph_n500_m750 diffusion=weighted_cascade -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/synthetic/graph_n500_m750/weighted_cascade/verified_exhaustive.json
+2026-07-29 23:52:11,549 | INFO | Generating/loading RR sets graph=graph_n600_m900 diffusion=uniform_ic_p0.1 tool=500 eval=10000
+2026-07-29 23:52:11,591 | INFO | Completed graph=graph_n600_m900 diffusion=uniform_ic_p0.1 -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/synthetic/graph_n600_m900/uniform_ic_p0.1/verified_exhaustive.json
+2026-07-29 23:52:11,596 | INFO | Generating/loading RR sets graph=graph_n600_m900 diffusion=weighted_cascade tool=500 eval=10000
+2026-07-29 23:52:11,650 | INFO | Completed graph=graph_n600_m900 diffusion=weighted_cascade -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/synthetic/graph_n600_m900/weighted_cascade/verified_exhaustive.json
+2026-07-29 23:52:11,654 | INFO | Generating/loading RR sets graph=graph_n700_m1050 diffusion=uniform_ic_p0.1 tool=500 eval=10000
+2026-07-29 23:52:11,699 | INFO | Completed graph=graph_n700_m1050 diffusion=uniform_ic_p0.1 -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/synthetic/graph_n700_m1050/uniform_ic_p0.1/verified_exhaustive.json
+2026-07-29 23:52:11,703 | INFO | Generating/loading RR sets graph=graph_n700_m1050 diffusion=weighted_cascade tool=500 eval=10000
+2026-07-29 23:52:11,749 | INFO | Completed graph=graph_n700_m1050 diffusion=weighted_cascade -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/synthetic/graph_n700_m1050/weighted_cascade/verified_exhaustive.json
+2026-07-29 23:52:11,753 | INFO | Generating/loading RR sets graph=graph_n800_m1200 diffusion=uniform_ic_p0.1 tool=500 eval=10000
+2026-07-29 23:52:11,781 | INFO | Completed graph=graph_n800_m1200 diffusion=uniform_ic_p0.1 -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/synthetic/graph_n800_m1200/uniform_ic_p0.1/verified_exhaustive.json
+2026-07-29 23:52:11,787 | INFO | Generating/loading RR sets graph=graph_n800_m1200 diffusion=weighted_cascade tool=500 eval=10000
+2026-07-29 23:52:11,835 | INFO | Completed graph=graph_n800_m1200 diffusion=weighted_cascade -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/synthetic/graph_n800_m1200/weighted_cascade/verified_exhaustive.json
+2026-07-29 23:52:11,840 | INFO | Generating/loading RR sets graph=graph_n900_m1350 diffusion=uniform_ic_p0.1 tool=500 eval=10000
+2026-07-29 23:52:11,884 | INFO | Completed graph=graph_n900_m1350 diffusion=uniform_ic_p0.1 -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/synthetic/graph_n900_m1350/uniform_ic_p0.1/verified_exhaustive.json
+2026-07-29 23:52:11,888 | INFO | Generating/loading RR sets graph=graph_n900_m1350 diffusion=weighted_cascade tool=500 eval=10000
+2026-07-29 23:52:11,941 | INFO | Completed graph=graph_n900_m1350 diffusion=weighted_cascade -> /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/Qwen_Qwen3.5-9B/synthetic/graph_n900_m1350/weighted_cascade/verified_exhaustive.json
+2026-07-29 23:52:11,949 | INFO | Finished: 144 budget result(s), 0 failure(s). Summary: /mnt/guanghua/Project/IM/VerifiedSearch/verified_search_outputs/summary_exhaustive.csv

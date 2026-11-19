@@ -1,0 +1,541 @@
+#!/usr/bin/env python3
+"""Export, parse, and uniformly evaluate official external IM baselines.
+
+Supported workflows
+-------------------
+export
+    Export current graph instances for official OPIM-C and ToupleGDD/S2V-DQN,
+    generate job manifests and shell scripts.
+parse-opim
+    Convert official OPIM-C seed files to standard JSONL records.
+parse-touple
+    Parse ToupleGDD/S2V-DQN logs, map compact external node IDs back to the
+    current processed graph IDs, and write standard JSONL records.
+evaluate
+    Evaluate any standard JSONL seed records with the same independent RR sets
+    as VerifiedSearch.
+
+Standard JSONL record:
+{"method":"opim_c_official","graph_name":"...","dataset_type":"real",
+ "diffusion":"weighted_cascade","budget":10,"seeds":[1,2,...]}
+"""
+from __future__ import annotations
+
+import argparse
+import csv
+import json
+import logging
+import re
+import shlex
+import sys
+from collections import Counter
+from pathlib import Path
+from typing import Any
+
+SCRIPT_DIR = Path(__file__).resolve().parent
+sys.path.insert(0, str(SCRIPT_DIR))
+
+from baseline_common import (  # noqa: E402
+    evaluate_seeds,
+    iter_aggregate_paths,
+    load_evaluation_context,
+    load_json,
+    make_summary_row,
+    save_json,
+    validate_seed_set,
+    write_summary,
+)
+
+LOGGER = logging.getLogger("external_baseline_bridge_v2")
+
+
+def safe_slug(value: str) -> str:
+    return re.sub(r"[^A-Za-z0-9_.-]+", "_", value).strip("_") or "graph"
+
+
+def external_name(graph_name: str, diffusion: str) -> str:
+    return f"{safe_slug(graph_name)}__{safe_slug(diffusion)}"
+
+
+def load_instances(candidate_root: Path) -> list[tuple[Path, dict[str, Any]]]:
+    result = [(path, load_json(path)) for path in iter_aggregate_paths(candidate_root)]
+    if not result:
+        raise RuntimeError(f"No aggregate.json files below {candidate_root}")
+    return result
+
+
+def resolve_graph(
+    aggregate_path: Path,
+    aggregate: dict[str, Any],
+    *,
+    candidate_root: Path,
+    rr_cache_dir: Path,
+    eval_rr_sets: int,
+    base_seed: int,
+):
+    _, graph_path, graph, _, _ = load_evaluation_context(
+        aggregate_path,
+        candidate_root=candidate_root,
+        rr_cache_dir=rr_cache_dir,
+        eval_rr_sets=eval_rr_sets,
+        base_seed=base_seed,
+    )
+    return graph_path, graph
+
+
+def command_export(args: argparse.Namespace) -> int:
+    candidate_root = args.candidate_root.resolve()
+    output_root = args.output_root.resolve()
+    rr_cache_dir = args.rr_cache_dir.resolve()
+
+    opim_graph_dir = output_root / "opim" / "graphInfo"
+    opim_result_dir = output_root / "opim" / "result"
+    touple_graph_dir = output_root / "touplegdd" / "test_data"
+    touple_mapping_dir = output_root / "touplegdd" / "mappings"
+    touple_log_dir = output_root / "touplegdd" / "logs"
+    for path in (opim_graph_dir, opim_result_dir, touple_graph_dir, touple_mapping_dir, touple_log_dir):
+        path.mkdir(parents=True, exist_ok=True)
+
+    manifest_rows: list[dict[str, Any]] = []
+    exported_opim: set[str] = set()
+    exported_touple: set[str] = set()
+
+    for aggregate_path, aggregate in load_instances(candidate_root):
+        graph_name = str(aggregate["graph_name"])
+        dataset_type = str(aggregate["dataset_type"])
+        diffusion = str(aggregate["diffusion"])
+        graph_path, graph = resolve_graph(
+            aggregate_path,
+            aggregate,
+            candidate_root=candidate_root,
+            rr_cache_dir=rr_cache_dir,
+            eval_rr_sets=args.eval_rr_sets,
+            base_seed=args.base_seed,
+        )
+
+        opim_name = external_name(graph_name, diffusion)
+        opim_raw = opim_graph_dir / opim_name
+        if opim_name not in exported_opim:
+            with opim_raw.open("w", encoding="utf-8") as handle:
+                handle.write(f"{graph.num_nodes} {graph.num_edges}\n")
+                if diffusion == "weighted_cascade":
+                    for u, v in graph.edges:
+                        handle.write(f"{u - 1} {v - 1}\n")
+                    opim_format_mode = "g"
+                elif diffusion.startswith("uniform_ic_p"):
+                    p = float(diffusion.removeprefix("uniform_ic_p"))
+                    for u, v in graph.edges:
+                        handle.write(f"{u - 1} {v - 1} {p:.12g}\n")
+                    opim_format_mode = "w"
+                else:
+                    raise ValueError(f"Unsupported diffusion: {diffusion}")
+            exported_opim.add(opim_name)
+        else:
+            opim_format_mode = "g" if diffusion == "weighted_cascade" else "w"
+
+        # ToupleGDD's loader expects zero-based, contiguous IDs and only sees
+        # nodes present in the edge list. We explicitly compact active nodes and
+        # save a reversible mapping. Isolated nodes are excluded; they have zero
+        # outward influence and cannot improve these positive budgets.
+        touple_graph = touple_graph_dir / f"{safe_slug(graph_name)}.txt"
+        touple_mapping = touple_mapping_dir / f"{safe_slug(graph_name)}.json"
+        if graph_name not in exported_touple:
+            active_nodes = sorted({int(u) for u, _ in graph.edges} | {int(v) for _, v in graph.edges})
+            original_to_external = {node: i for i, node in enumerate(active_nodes)}
+            external_to_original = active_nodes
+            with touple_graph.open("w", encoding="utf-8") as handle:
+                for u, v in graph.edges:
+                    handle.write(f"{original_to_external[int(u)]} {original_to_external[int(v)]}\n")
+            save_json(
+                {
+                    "graph_name": graph_name,
+                    "original_num_nodes": graph.num_nodes,
+                    "external_num_nodes": len(active_nodes),
+                    "external_to_original_1based": external_to_original,
+                    "source_graph": str(graph_path),
+                },
+                touple_mapping,
+            )
+            exported_touple.add(graph_name)
+
+        for budget in map(int, aggregate.get("budgets", [10, 20, 30])):
+            manifest_rows.append(
+                {
+                    "graph_name": graph_name,
+                    "dataset_type": dataset_type,
+                    "diffusion": diffusion,
+                    "budget": budget,
+                    "num_nodes": graph.num_nodes,
+                    "num_edges": graph.num_edges,
+                    "aggregate_file": str(aggregate_path),
+                    "opim_external_name": opim_name,
+                    "opim_raw_file": str(opim_raw),
+                    "opim_format_mode": opim_format_mode,
+                    "touple_graph_file": str(touple_graph),
+                    "touple_mapping_file": str(touple_mapping),
+                }
+            )
+
+    manifest = output_root / "external_jobs.csv"
+    with manifest.open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=list(manifest_rows[0]))
+        writer.writeheader()
+        writer.writerows(manifest_rows)
+
+    opim_script = output_root / "opim" / "run_opimc_all.sh"
+    format_jobs = {
+        row["opim_external_name"]: row["opim_format_mode"] for row in manifest_rows
+    }
+    with opim_script.open("w", encoding="utf-8") as handle:
+        handle.write("#!/usr/bin/env bash\nset -euo pipefail\n")
+        handle.write('OPIM_REPO="${OPIM_REPO:?Set OPIM_REPO to the cloned tangj90/OPIM directory}"\n')
+        handle.write('OPIM_WORK="${OPIM_WORK:-$OPIM_REPO/OPIM1.1}"\n')
+        handle.write(f'GRAPH_DIR={shlex.quote(str(opim_graph_dir))}\n')
+        handle.write(f'OUT_DIR={shlex.quote(str(opim_result_dir))}\n')
+        handle.write('cd "$OPIM_WORK"\n')
+        handle.write('g++ -std=c++14 -O3 OPIM.cpp -o OPIM1.1.o\n')
+        handle.write('mkdir -p "$OUT_DIR"\n')
+        for name, mode in sorted(format_jobs.items()):
+            handle.write(
+                f'./OPIM1.1.o -func=0 -dir="$GRAPH_DIR" -gname={shlex.quote(name)} -mode={mode}\n'
+            )
+        for row in manifest_rows:
+            handle.write(
+                './OPIM1.1.o -func=1 '
+                f'-dir="$GRAPH_DIR" -gname={shlex.quote(row["opim_external_name"])} '
+                f'-alg=opim-c -mode=2 -seedsize={row["budget"]} -eps={args.opim_epsilon} '
+                '-model=IC -pdist=load -outpath="$OUT_DIR"\n'
+            )
+    opim_script.chmod(0o755)
+
+    touple_script = output_root / "touplegdd" / "run_weighted_cascade_all.sh"
+    wc_jobs = sorted(
+        {
+            (row["graph_name"], int(row["budget"]), row["touple_graph_file"])
+            for row in manifest_rows
+            if row["diffusion"] == "weighted_cascade"
+        }
+    )
+    with touple_script.open("w", encoding="utf-8") as handle:
+        handle.write("#!/usr/bin/env bash\nset -euo pipefail\n")
+        handle.write('TOUPLE_REPO="${TOUPLE_REPO:?Set TOUPLE_REPO to the cloned Dtrycode/ToupleGDD directory}"\n')
+        handle.write(f'LOG_DIR={shlex.quote(str(touple_log_dir))}\n')
+        handle.write('mkdir -p "$LOG_DIR"\ncd "$TOUPLE_REPO"\n')
+        for graph_name, budget, graph_file in wc_jobs:
+            slug = safe_slug(graph_name)
+            handle.write(
+                f'python main.py --graph {shlex.quote(graph_file)} --model Tripling '
+                f'--model_file tripling.ckpt --budget {budget} --test '
+                f'2>&1 | tee "$LOG_DIR/tripling_{slug}_k{budget}.log"\n'
+            )
+            handle.write(
+                f'python main.py --graph {shlex.quote(graph_file)} --model S2V_DQN '
+                f'--model_file s2vdqn.ckpt --budget {budget} --test '
+                f'2>&1 | tee "$LOG_DIR/s2vdqn_{slug}_k{budget}.log"\n'
+            )
+    touple_script.chmod(0o755)
+
+    save_json(
+        {
+            "version": 2,
+            "jobs": len(manifest_rows),
+            "manifest": str(manifest),
+            "opim_script": str(opim_script),
+            "touple_script": str(touple_script),
+            "note": "ToupleGDD/S2V-DQN jobs are generated only for weighted_cascade.",
+        },
+        output_root / "export_index.json",
+    )
+    LOGGER.info("Exported %d graph-diffusion-budget jobs to %s", len(manifest_rows), output_root)
+    return 0
+
+
+def parse_opim_runtime(path: Path) -> float:
+    if not path.exists():
+        return 0.0
+    text = path.read_text(encoding="utf-8", errors="replace")
+    for pattern in (r"Time\s*\(sec\)\s*:\s*([0-9.eE+-]+)", r"time[^0-9]*([0-9.]+)"):
+        match = re.search(pattern, text, flags=re.I)
+        if match:
+            return float(match.group(1))
+    return 0.0
+
+
+def read_jobs(path: Path) -> list[dict[str, str]]:
+    with path.open("r", encoding="utf-8", newline="") as handle:
+        return list(csv.DictReader(handle))
+
+
+def command_parse_opim(args: argparse.Namespace) -> int:
+    jobs = read_jobs(args.jobs_csv)
+    result_dir = args.result_dir.resolve()
+    records: list[dict[str, Any]] = []
+    missing: list[dict[str, Any]] = []
+
+    for row in jobs:
+        name = row["opim_external_name"]
+        budget = int(row["budget"])
+        seed_dir = result_dir / "seed"
+        patterns = [
+            f"seed_{name}_opim-c_k{budget}_load*",
+            f"seed_{name}_opim-c_k{budget}_*",
+        ]
+        matches: list[Path] = []
+        for pattern in patterns:
+            matches.extend(seed_dir.glob(pattern))
+        matches = sorted(set(matches))
+        if not matches:
+            missing.append({"name": name, "budget": budget})
+            continue
+        seed_file = matches[0]
+        zero_based = [
+            int(line.strip())
+            for line in seed_file.read_text(encoding="utf-8").splitlines()
+            if line.strip()
+        ]
+        if len(zero_based) < budget:
+            raise ValueError(f"{seed_file} has {len(zero_based)} seeds for budget {budget}")
+        result_file = result_dir / seed_file.name.removeprefix("seed_")
+        records.append(
+            {
+                "method": args.method_name,
+                "graph_name": row["graph_name"],
+                "dataset_type": row["dataset_type"],
+                "diffusion": row["diffusion"],
+                "budget": budget,
+                "seeds": [node + 1 for node in zero_based[:budget]],
+                "runtime_seconds": parse_opim_runtime(result_file),
+                "source_file": str(seed_file),
+                "notes": "Official OPIM-C output, remapped from zero-based IDs.",
+            }
+        )
+
+    args.output_jsonl.parent.mkdir(parents=True, exist_ok=True)
+    with args.output_jsonl.open("w", encoding="utf-8") as handle:
+        for record in records:
+            handle.write(json.dumps(record) + "\n")
+    save_json({"records": len(records), "missing": missing}, args.output_jsonl.with_suffix(".index.json"))
+    LOGGER.info("Parsed %d OPIM-C records; missing=%d", len(records), len(missing))
+    return 0 if not missing else 2
+
+
+def parse_touple_sections(text: str) -> dict[str, list[list[int]]]:
+    sections = {"one_time": [], "one_by_one": []}
+    current: str | None = None
+    for line in text.splitlines():
+        if "Generate seeds at one time" in line:
+            current = "one_time"
+            continue
+        if "Generate seed one by one" in line:
+            current = "one_by_one"
+            continue
+        if current is None:
+            continue
+        match = re.search(r"Seeds:\s*\[([^\]]*)\]", line)
+        if match:
+            seeds = [int(x) for x in re.findall(r"-?\d+", match.group(1))]
+            sections[current].append(seeds)
+    return sections
+
+
+def parse_touple_runtime(text: str, mode: str) -> float:
+    values = [
+        float(x)
+        for x in re.findall(
+            r"Seed set generation per iteration time usage is:\s*([0-9.eE+-]+)",
+            text,
+        )
+    ]
+    if not values:
+        return 0.0
+    if mode == "one_time":
+        return values[0]
+    return values[1] if len(values) > 1 else values[-1]
+
+
+def modal_seed_set(seed_sets: list[list[int]], budget: int) -> tuple[list[int], float]:
+    valid = [tuple(seeds[:budget]) for seeds in seed_sets if len(seeds) >= budget]
+    if not valid:
+        raise ValueError("No valid seed sets in log")
+    counts = Counter(valid)
+    seeds, frequency = counts.most_common(1)[0]
+    return list(seeds), frequency / len(valid)
+
+
+def command_parse_touple(args: argparse.Namespace) -> int:
+    jobs = [row for row in read_jobs(args.jobs_csv) if row["diffusion"] == "weighted_cascade"]
+    log_dir = args.log_dir.resolve()
+    records: list[dict[str, Any]] = []
+    missing: list[dict[str, Any]] = []
+    model_specs = []
+    if "tripling" in args.models:
+        model_specs.append(("tripling", args.tripling_method_name))
+    if "s2vdqn" in args.models:
+        model_specs.append(("s2vdqn", args.s2vdqn_method_name))
+
+    for row in jobs:
+        budget = int(row["budget"])
+        mapping = load_json(Path(row["touple_mapping_file"]))
+        external_to_original = [int(x) for x in mapping["external_to_original_1based"]]
+        slug = safe_slug(row["graph_name"])
+
+        for log_prefix, method_name in model_specs:
+            log_path = log_dir / f"{log_prefix}_{slug}_k{budget}.log"
+            if not log_path.exists():
+                missing.append({"log": str(log_path)})
+                continue
+            text = log_path.read_text(encoding="utf-8", errors="replace")
+            sections = parse_touple_sections(text)
+            external_seeds, agreement = modal_seed_set(sections[args.selection_mode], budget)
+            original_seeds: list[int] = []
+            for node in external_seeds:
+                if not 0 <= node < len(external_to_original):
+                    raise ValueError(f"External node {node} outside mapping in {log_path}")
+                original_seeds.append(external_to_original[node])
+            records.append(
+                {
+                    "method": method_name,
+                    "graph_name": row["graph_name"],
+                    "dataset_type": row["dataset_type"],
+                    "diffusion": "weighted_cascade",
+                    "budget": budget,
+                    "seeds": original_seeds,
+                    "runtime_seconds": parse_touple_runtime(text, args.selection_mode),
+                    "source_file": str(log_path),
+                    "notes": (
+                        f"Official pretrained {log_prefix}; {args.selection_mode}; "
+                        f"modal seed set agreement={agreement:.3f}."
+                    ),
+                }
+            )
+
+    args.output_jsonl.parent.mkdir(parents=True, exist_ok=True)
+    with args.output_jsonl.open("w", encoding="utf-8") as handle:
+        for record in records:
+            handle.write(json.dumps(record) + "\n")
+    save_json({"records": len(records), "missing": missing}, args.output_jsonl.with_suffix(".index.json"))
+    LOGGER.info("Parsed %d Touple/S2V records; missing=%d", len(records), len(missing))
+    return 0 if not missing else 2
+
+
+def read_jsonl(path: Path) -> list[dict[str, Any]]:
+    records: list[dict[str, Any]] = []
+    with path.open("r", encoding="utf-8") as handle:
+        for line_number, line in enumerate(handle, start=1):
+            line = line.strip()
+            if not line:
+                continue
+            payload = json.loads(line)
+            if not isinstance(payload, dict):
+                raise ValueError(f"Expected object at {path}:{line_number}")
+            records.append(payload)
+    return records
+
+
+def command_evaluate(args: argparse.Namespace) -> int:
+    candidate_root = args.candidate_root.resolve()
+    aggregate_map: dict[tuple[str, str], Path] = {}
+    for path in iter_aggregate_paths(candidate_root):
+        aggregate = load_json(path)
+        aggregate_map[(str(aggregate["graph_name"]), str(aggregate["diffusion"]))] = path
+
+    rows_by_method: dict[str, list[dict[str, Any]]] = {}
+    for record in read_jsonl(args.seed_records):
+        key = (str(record["graph_name"]), str(record["diffusion"]))
+        if key not in aggregate_map:
+            raise KeyError(f"No current instance for {key}")
+        aggregate_path = aggregate_map[key]
+        aggregate, _, graph, eval_bitsets, _ = load_evaluation_context(
+            aggregate_path,
+            candidate_root=candidate_root,
+            rr_cache_dir=args.rr_cache_dir.resolve(),
+            eval_rr_sets=args.eval_rr_sets,
+            base_seed=args.base_seed,
+            overwrite_rr_cache=args.overwrite_rr_cache,
+        )
+        budget = int(record["budget"])
+        seeds = validate_seed_set(record["seeds"], budget=budget, num_nodes=graph.num_nodes)
+        metrics = evaluate_seeds(
+            seeds,
+            graph=graph,
+            eval_bitsets=eval_bitsets,
+            eval_rr_sets=args.eval_rr_sets,
+        )
+        method = str(record["method"])
+        rows_by_method.setdefault(method, []).append(
+            make_summary_row(
+                method=method,
+                aggregate=aggregate,
+                graph=graph,
+                budget=budget,
+                seeds=seeds,
+                metrics=metrics,
+                eval_rr_sets=args.eval_rr_sets,
+                runtime_seconds=float(record.get("runtime_seconds", 0.0)),
+                source_file=str(record.get("source_file", args.seed_records)),
+                notes=str(record.get("notes", "")),
+            )
+        )
+
+    args.output_dir.mkdir(parents=True, exist_ok=True)
+    for method, rows in rows_by_method.items():
+        path = args.output_dir / f"summary_{safe_slug(method)}.csv"
+        write_summary(rows, path)
+        LOGGER.info("Wrote %d rows: %s", len(rows), path)
+    return 0
+
+
+def build_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--log-level", choices=("DEBUG", "INFO", "WARNING"), default="INFO")
+    sub = parser.add_subparsers(dest="command", required=True)
+
+    export = sub.add_parser("export")
+    export.add_argument("--candidate-root", type=Path, default=Path("VerifiedSearch/candidate_outputs_qwen35_9b"))
+    export.add_argument("--rr-cache-dir", type=Path, default=Path("VerifiedSearch/rr_cache_complete"))
+    export.add_argument("--output-root", type=Path, default=Path("VerifiedSearch/external_baselines_v2"))
+    export.add_argument("--eval-rr-sets", type=int, default=10000)
+    export.add_argument("--base-seed", type=int, default=2026)
+    export.add_argument("--opim-epsilon", type=float, default=0.1)
+    export.set_defaults(func=command_export)
+
+    parse_opim = sub.add_parser("parse-opim")
+    parse_opim.add_argument("--jobs-csv", type=Path, required=True)
+    parse_opim.add_argument("--result-dir", type=Path, required=True)
+    parse_opim.add_argument("--output-jsonl", type=Path, required=True)
+    parse_opim.add_argument("--method-name", default="opim_c_official")
+    parse_opim.set_defaults(func=command_parse_opim)
+
+    parse_touple = sub.add_parser("parse-touple")
+    parse_touple.add_argument("--jobs-csv", type=Path, required=True)
+    parse_touple.add_argument("--log-dir", type=Path, required=True)
+    parse_touple.add_argument("--output-jsonl", type=Path, required=True)
+    parse_touple.add_argument("--models", nargs="+", choices=("tripling", "s2vdqn"), default=["tripling", "s2vdqn"])
+    parse_touple.add_argument("--selection-mode", choices=("one_by_one", "one_time"), default="one_by_one")
+    parse_touple.add_argument("--tripling-method-name", default="touplegdd_official")
+    parse_touple.add_argument("--s2vdqn-method-name", default="s2vdqn_official")
+    parse_touple.set_defaults(func=command_parse_touple)
+
+    evaluate = sub.add_parser("evaluate")
+    evaluate.add_argument("--seed-records", type=Path, required=True)
+    evaluate.add_argument("--candidate-root", type=Path, default=Path("VerifiedSearch/candidate_outputs_qwen35_9b"))
+    evaluate.add_argument("--rr-cache-dir", type=Path, default=Path("VerifiedSearch/rr_cache_complete"))
+    evaluate.add_argument("--output-dir", type=Path, default=Path("VerifiedSearch/baseline_outputs_v2/external"))
+    evaluate.add_argument("--eval-rr-sets", type=int, default=10000)
+    evaluate.add_argument("--base-seed", type=int, default=2026)
+    evaluate.add_argument("--overwrite-rr-cache", action="store_true")
+    evaluate.set_defaults(func=command_evaluate)
+    return parser
+
+
+def main() -> int:
+    args = build_parser().parse_args()
+    logging.basicConfig(
+        level=getattr(logging, args.log_level),
+        format="%(asctime)s | %(levelname)s | %(message)s",
+    )
+    return int(args.func(args))
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

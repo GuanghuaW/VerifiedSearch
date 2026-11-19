@@ -1,0 +1,126 @@
+2026-07-30 00:19:05,012 | INFO | Inspecting model config: Qwen/Qwen3.5-9B
+2026-07-30 00:19:05,908 | INFO | HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.5-9B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-07-30 00:19:05,908 | WARNING | Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-07-30 00:19:06,000 | INFO | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.5-9B/c202236235762e1c871ad0ccb60c8ee5ba337b9a/config.json "HTTP/1.1 200 OK"
+2026-07-30 00:19:06,018 | INFO | Loading multimodal processor: Qwen/Qwen3.5-9B
+2026-07-30 00:19:06,211 | INFO | HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.5-9B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-07-30 00:19:06,406 | INFO | HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.5-9B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-30 00:19:06,497 | INFO | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.5-9B/c202236235762e1c871ad0ccb60c8ee5ba337b9a/preprocessor_config.json "HTTP/1.1 200 OK"
+2026-07-30 00:19:06,691 | INFO | HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.5-9B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-07-30 00:19:06,886 | INFO | HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.5-9B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-30 00:19:06,977 | INFO | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.5-9B/c202236235762e1c871ad0ccb60c8ee5ba337b9a/preprocessor_config.json "HTTP/1.1 200 OK"
+2026-07-30 00:19:07,174 | INFO | HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3.5-9B/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-07-30 00:19:07,372 | INFO | HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.5-9B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-07-30 00:19:07,646 | INFO | HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.5-9B/resolve/main/chat_template.json "HTTP/1.1 404 Not Found"
+2026-07-30 00:19:07,848 | INFO | HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.5-9B/resolve/main/chat_template.jinja "HTTP/1.1 307 Temporary Redirect"
+2026-07-30 00:19:07,940 | INFO | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.5-9B/c202236235762e1c871ad0ccb60c8ee5ba337b9a/chat_template.jinja "HTTP/1.1 200 OK"
+2026-07-30 00:19:08,138 | INFO | HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.5-9B/resolve/main/audio_tokenizer_config.json "HTTP/1.1 404 Not Found"
+2026-07-30 00:19:08,337 | INFO | HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.5-9B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-07-30 00:19:08,534 | INFO | HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.5-9B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-30 00:19:08,625 | INFO | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.5-9B/c202236235762e1c871ad0ccb60c8ee5ba337b9a/preprocessor_config.json "HTTP/1.1 200 OK"
+2026-07-30 00:19:08,835 | INFO | HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.5-9B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-07-30 00:19:09,030 | INFO | HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.5-9B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-30 00:19:09,122 | INFO | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.5-9B/c202236235762e1c871ad0ccb60c8ee5ba337b9a/preprocessor_config.json "HTTP/1.1 200 OK"
+2026-07-30 00:19:09,318 | INFO | HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.5-9B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-30 00:19:09,409 | INFO | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.5-9B/c202236235762e1c871ad0ccb60c8ee5ba337b9a/config.json "HTTP/1.1 200 OK"
+2026-07-30 00:19:09,614 | INFO | HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.5-9B/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-30 00:19:09,706 | INFO | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.5-9B/c202236235762e1c871ad0ccb60c8ee5ba337b9a/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-07-30 00:19:09,903 | INFO | HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.5-9B/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-30 00:19:09,996 | INFO | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.5-9B/c202236235762e1c871ad0ccb60c8ee5ba337b9a/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-07-30 00:19:10,192 | INFO | HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3.5-9B/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-07-30 00:19:10,392 | INFO | HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3.5-9B/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-07-30 00:19:11,022 | INFO | HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3.5-9B "HTTP/1.1 200 OK"
+2026-07-30 00:19:11,219 | INFO | HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.5-9B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-07-30 00:19:11,414 | INFO | HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.5-9B/resolve/main/video_preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-30 00:19:11,506 | INFO | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.5-9B/c202236235762e1c871ad0ccb60c8ee5ba337b9a/video_preprocessor_config.json "HTTP/1.1 200 OK"
+2026-07-30 00:19:11,699 | INFO | HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.5-9B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-30 00:19:11,790 | INFO | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.5-9B/c202236235762e1c871ad0ccb60c8ee5ba337b9a/preprocessor_config.json "HTTP/1.1 200 OK"
+2026-07-30 00:19:11,989 | INFO | HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.5-9B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-07-30 00:19:12,185 | INFO | HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.5-9B/resolve/main/video_preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-30 00:19:12,278 | INFO | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.5-9B/c202236235762e1c871ad0ccb60c8ee5ba337b9a/video_preprocessor_config.json "HTTP/1.1 200 OK"
+2026-07-30 00:19:12,472 | INFO | HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.5-9B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-30 00:19:12,563 | INFO | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.5-9B/c202236235762e1c871ad0ccb60c8ee5ba337b9a/preprocessor_config.json "HTTP/1.1 200 OK"
+2026-07-30 00:19:12,564 | INFO | Loading multimodal model: Qwen/Qwen3.5-9B
+2026-07-30 00:19:12,761 | INFO | HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.5-9B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-30 00:19:12,854 | INFO | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.5-9B/c202236235762e1c871ad0ccb60c8ee5ba337b9a/config.json "HTTP/1.1 200 OK"
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[transformers] The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/760 [00:00<?, ?it/s]Loading weights:   0%|          | 1/760 [00:15<3:11:17, 15.12s/it]Loading weights:   0%|          | 2/760 [00:29<3:09:06, 14.97s/it]Loading weights:   1%|          | 9/760 [00:30<27:58,  2.24s/it]  Loading weights:   1%|▏         | 11/760 [00:30<21:30,  1.72s/it]Loading weights:   2%|▏         | 13/760 [00:31<17:00,  1.37s/it]Loading weights:   2%|▏         | 14/760 [00:32<15:46,  1.27s/it]Loading weights:   2%|▏         | 15/760 [00:33<14:37,  1.18s/it]Loading weights:   3%|▎         | 22/760 [00:33<05:19,  2.31it/s]Loading weights:   3%|▎         | 26/760 [00:33<03:44,  3.27it/s]Loading weights:   4%|▎         | 28/760 [00:34<03:56,  3.10it/s]Loading weights:   4%|▍         | 29/760 [00:35<04:37,  2.63it/s]Loading weights:   5%|▍         | 36/760 [00:35<02:31,  4.76it/s]Loading weights:   5%|▌         | 38/760 [00:37<03:34,  3.36it/s]Loading weights:   6%|▌         | 46/760 [00:38<02:17,  5.19it/s]Loading weights:   6%|▌         | 47/760 [00:38<02:51,  4.15it/s]Loading weights:   6%|▋         | 48/760 [00:39<03:32,  3.36it/s]Loading weights:   7%|▋         | 52/760 [00:39<02:31,  4.67it/s]Loading weights:   7%|▋         | 54/760 [00:40<02:36,  4.50it/s]Loading weights:   8%|▊         | 59/760 [00:40<02:03,  5.66it/s]Loading weights:   8%|▊         | 63/760 [00:41<01:36,  7.21it/s]Loading weights:   9%|▊         | 65/760 [00:41<01:35,  7.25it/s]Loading weights:   9%|▊         | 66/760 [00:42<02:29,  4.63it/s]Loading weights:   9%|▉         | 67/760 [00:43<04:44,  2.44it/s]Loading weights:  10%|▉         | 75/760 [00:44<01:59,  5.73it/s]Loading weights:  10%|█         | 79/760 [00:44<01:34,  7.21it/s]Loading weights:  11%|█▏        | 86/760 [00:45<01:22,  8.13it/s]Loading weights:  13%|█▎        | 96/760 [00:48<02:22,  4.66it/s]Loading weights:  15%|█▌        | 116/760 [00:48<01:03, 10.12it/s]Loading weights:  16%|█▌        | 120/760 [00:48<01:01, 10.46it/s]Loading weights:  17%|█▋        | 128/760 [00:49<00:51, 12.25it/s]Loading weights:  17%|█▋        | 132/760 [00:49<00:47, 13.12it/s]Loading weights:  19%|█▊        | 142/760 [00:49<00:42, 14.54it/s]Loading weights:  20%|██        | 154/760 [00:50<00:27, 21.90it/s]Loading weights:  21%|██        | 159/760 [00:50<00:28, 21.33it/s]Loading weights:  22%|██▏       | 168/760 [00:50<00:31, 19.01it/s]Loading weights:  23%|██▎       | 172/760 [00:52<00:56, 10.33it/s]Loading weights:  24%|██▍       | 182/760 [00:52<00:45, 12.76it/s]Loading weights:  24%|██▍       | 185/760 [00:53<00:50, 11.34it/s]Loading weights:  25%|██▍       | 188/760 [00:55<02:11,  4.36it/s]Loading weights:  31%|███       | 232/760 [01:00<01:14,  7.10it/s]Loading weights:  43%|████▎     | 327/760 [01:02<00:21, 20.26it/s]Loading weights:  44%|████▎     | 331/760 [01:02<00:21, 20.28it/s]Loading weights:  45%|████▌     | 342/760 [01:02<00:18, 22.12it/s]Loading weights:  46%|████▌     | 346/760 [01:03<00:25, 16.28it/s]Loading weights:  47%|████▋     | 357/760 [01:03<00:21, 19.07it/s]Loading weights:  48%|████▊     | 361/760 [01:04<00:26, 14.84it/s]Loading weights:  48%|████▊     | 364/760 [01:05<00:33, 11.73it/s]Loading weights:  48%|████▊     | 366/760 [01:06<00:44,  8.94it/s]Loading weights:  49%|████▊     | 369/760 [01:10<02:00,  3.25it/s]Loading weights:  65%|██████▌   | 494/760 [01:10<00:08, 30.90it/s]Loading weights:  68%|██████▊   | 514/760 [01:12<00:10, 22.98it/s]Loading weights:  85%|████████▍ | 645/760 [01:12<00:02, 56.15it/s]Loading weights:  89%|████████▊ | 673/760 [01:13<00:01, 57.76it/s]Loading weights:  91%|█████████▏| 695/760 [01:14<00:01, 38.37it/s]Loading weights: 100%|██████████| 760/760 [01:14<00:00, 10.15it/s]
+2026-07-30 00:20:31,072 | INFO | HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.5-9B/resolve/main/generation_config.json "HTTP/1.1 404 Not Found"
+2026-07-30 00:20:31,099 | INFO | HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.5-9B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-30 00:20:31,106 | INFO | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.5-9B/c202236235762e1c871ad0ccb60c8ee5ba337b9a/config.json "HTTP/1.1 200 OK"
+2026-07-30 00:20:31,140 | INFO | Graph=ENZYMES_g297 diffusion=uniform_ic_p0.1 permutation=perm_000
+2026-07-30 00:22:42,251 | INFO | Graph=ENZYMES_g297 diffusion=uniform_ic_p0.1 permutation=perm_001
+2026-07-30 00:23:25,514 | INFO | Graph=ENZYMES_g297 diffusion=uniform_ic_p0.1 permutation=perm_002
+2026-07-30 00:24:23,405 | INFO | Graph=ENZYMES_g297 diffusion=uniform_ic_p0.1 permutation=perm_003
+2026-07-30 00:26:50,169 | INFO | Graph=ENZYMES_g297 diffusion=uniform_ic_p0.1 permutation=perm_004
+2026-07-30 00:29:58,704 | INFO | Finished graph=ENZYMES_g297 diffusion=uniform_ic_p0.1 pool=103 valid_runs=4
+2026-07-30 00:29:58,717 | INFO | Graph=ENZYMES_g297 diffusion=weighted_cascade permutation=perm_000
+2026-07-30 00:30:45,602 | INFO | Graph=ENZYMES_g297 diffusion=weighted_cascade permutation=perm_001
+2026-07-30 00:31:08,368 | INFO | Graph=ENZYMES_g297 diffusion=weighted_cascade permutation=perm_002
+2026-07-30 00:34:16,841 | INFO | Graph=ENZYMES_g297 diffusion=weighted_cascade permutation=perm_003
+2026-07-30 00:37:25,292 | INFO | Graph=ENZYMES_g297 diffusion=weighted_cascade permutation=perm_004
+2026-07-30 00:39:49,172 | INFO | Finished graph=ENZYMES_g297 diffusion=weighted_cascade pool=102 valid_runs=3
+2026-07-30 00:39:49,188 | INFO | Graph=bio-CE-LC diffusion=uniform_ic_p0.1 permutation=perm_000
+2026-07-30 00:43:31,520 | INFO | Graph=bio-CE-LC diffusion=uniform_ic_p0.1 permutation=perm_001
+2026-07-30 00:47:10,137 | INFO | Graph=bio-CE-LC diffusion=uniform_ic_p0.1 permutation=perm_002
+2026-07-30 00:48:54,206 | INFO | Graph=bio-CE-LC diffusion=uniform_ic_p0.1 permutation=perm_003
+2026-07-30 00:49:45,092 | INFO | Graph=bio-CE-LC diffusion=uniform_ic_p0.1 permutation=perm_004
+2026-07-30 00:50:53,094 | INFO | Finished graph=bio-CE-LC diffusion=uniform_ic_p0.1 pool=150 valid_runs=4
+2026-07-30 00:50:53,106 | INFO | Graph=bio-CE-LC diffusion=weighted_cascade permutation=perm_000
+2026-07-30 00:54:35,230 | INFO | Graph=bio-CE-LC diffusion=weighted_cascade permutation=perm_001
+2026-07-30 00:56:17,444 | INFO | Graph=bio-CE-LC diffusion=weighted_cascade permutation=perm_002
+2026-07-30 00:57:44,187 | INFO | Graph=bio-CE-LC diffusion=weighted_cascade permutation=perm_003
+2026-07-30 00:59:15,669 | INFO | Graph=bio-CE-LC diffusion=weighted_cascade permutation=perm_004
+2026-07-30 01:00:15,208 | INFO | Finished graph=bio-CE-LC diffusion=weighted_cascade pool=150 valid_runs=4
+2026-07-30 01:00:15,222 | INFO | Graph=bn-mouse-kasthuri_graph_v4 diffusion=uniform_ic_p0.1 permutation=perm_000
+2026-07-30 01:02:53,449 | INFO | Graph=bn-mouse-kasthuri_graph_v4 diffusion=uniform_ic_p0.1 permutation=perm_001
+2026-07-30 01:03:36,408 | INFO | Graph=bn-mouse-kasthuri_graph_v4 diffusion=uniform_ic_p0.1 permutation=perm_002
+2026-07-30 01:07:11,511 | INFO | Graph=bn-mouse-kasthuri_graph_v4 diffusion=uniform_ic_p0.1 permutation=perm_003
+2026-07-30 01:10:46,604 | INFO | Graph=bn-mouse-kasthuri_graph_v4 diffusion=uniform_ic_p0.1 permutation=perm_004
+2026-07-30 01:11:59,711 | INFO | Finished graph=bn-mouse-kasthuri_graph_v4 diffusion=uniform_ic_p0.1 pool=119 valid_runs=3
+2026-07-30 01:11:59,726 | INFO | Graph=bn-mouse-kasthuri_graph_v4 diffusion=weighted_cascade permutation=perm_000
+2026-07-30 01:13:06,225 | INFO | Graph=bn-mouse-kasthuri_graph_v4 diffusion=weighted_cascade permutation=perm_001
+2026-07-30 01:13:50,819 | INFO | Graph=bn-mouse-kasthuri_graph_v4 diffusion=weighted_cascade permutation=perm_002
+2026-07-30 01:17:25,925 | INFO | Graph=bn-mouse-kasthuri_graph_v4 diffusion=weighted_cascade permutation=perm_003
+2026-07-30 01:18:27,640 | INFO | Graph=bn-mouse-kasthuri_graph_v4 diffusion=weighted_cascade permutation=perm_004
+2026-07-30 01:22:02,750 | INFO | Finished graph=bn-mouse-kasthuri_graph_v4 diffusion=weighted_cascade pool=128 valid_runs=3
+2026-07-30 01:22:02,765 | INFO | Graph=gene diffusion=uniform_ic_p0.1 permutation=perm_000
+2026-07-30 01:22:55,469 | INFO | Graph=gene diffusion=uniform_ic_p0.1 permutation=perm_001
+2026-07-30 01:24:22,156 | INFO | Graph=gene diffusion=uniform_ic_p0.1 permutation=perm_002
+2026-07-30 01:25:37,802 | INFO | Graph=gene diffusion=uniform_ic_p0.1 permutation=perm_003
+2026-07-30 01:28:32,967 | INFO | Graph=gene diffusion=uniform_ic_p0.1 permutation=perm_004
+2026-07-30 01:32:09,999 | INFO | Finished graph=gene diffusion=uniform_ic_p0.1 pool=150 valid_runs=4
+2026-07-30 01:32:10,015 | INFO | Graph=gene diffusion=weighted_cascade permutation=perm_000
+2026-07-30 01:33:05,039 | INFO | Graph=gene diffusion=weighted_cascade permutation=perm_001
+2026-07-30 01:34:41,217 | INFO | Graph=gene diffusion=weighted_cascade permutation=perm_002
+2026-07-30 01:35:55,543 | INFO | Graph=gene diffusion=weighted_cascade permutation=perm_003
+2026-07-30 01:37:01,882 | INFO | Graph=gene diffusion=weighted_cascade permutation=perm_004
+2026-07-30 01:37:51,146 | INFO | Finished graph=gene diffusion=weighted_cascade pool=150 valid_runs=5
+2026-07-30 01:37:51,162 | INFO | Graph=internet-industry-partnerships diffusion=uniform_ic_p0.1 permutation=perm_000
+2026-07-30 01:38:23,690 | INFO | Graph=internet-industry-partnerships diffusion=uniform_ic_p0.1 permutation=perm_001
+2026-07-30 01:39:20,961 | INFO | Graph=internet-industry-partnerships diffusion=uniform_ic_p0.1 permutation=perm_002
+2026-07-30 01:39:53,298 | INFO | Graph=internet-industry-partnerships diffusion=uniform_ic_p0.1 permutation=perm_003
+2026-07-30 01:40:40,958 | INFO | Graph=internet-industry-partnerships diffusion=uniform_ic_p0.1 permutation=perm_004
+2026-07-30 01:41:11,212 | INFO | Finished graph=internet-industry-partnerships diffusion=uniform_ic_p0.1 pool=142 valid_runs=5
+2026-07-30 01:41:11,224 | INFO | Graph=internet-industry-partnerships diffusion=weighted_cascade permutation=perm_000
+2026-07-30 01:41:47,416 | INFO | Graph=internet-industry-partnerships diffusion=weighted_cascade permutation=perm_001
+2026-07-30 01:43:20,974 | INFO | Graph=internet-industry-partnerships diffusion=weighted_cascade permutation=perm_002
+2026-07-30 01:43:52,314 | INFO | Graph=internet-industry-partnerships diffusion=weighted_cascade permutation=perm_003
+2026-07-30 01:45:25,901 | INFO | Graph=internet-industry-partnerships diffusion=weighted_cascade permutation=perm_004
+2026-07-30 01:46:18,667 | INFO | Finished graph=internet-industry-partnerships diffusion=weighted_cascade pool=145 valid_runs=5
+2026-07-30 01:46:18,683 | INFO | Graph=webkb-wisc diffusion=uniform_ic_p0.1 permutation=perm_000
+2026-07-30 01:47:34,898 | INFO | Graph=webkb-wisc diffusion=uniform_ic_p0.1 permutation=perm_001
+2026-07-30 01:48:24,128 | INFO | Graph=webkb-wisc diffusion=uniform_ic_p0.1 permutation=perm_002
+2026-07-30 01:49:49,151 | INFO | Graph=webkb-wisc diffusion=uniform_ic_p0.1 permutation=perm_003
+2026-07-30 01:52:44,582 | INFO | Graph=webkb-wisc diffusion=uniform_ic_p0.1 permutation=perm_004
+2026-07-30 01:55:18,225 | INFO | Finished graph=webkb-wisc diffusion=uniform_ic_p0.1 pool=150 valid_runs=5
+2026-07-30 01:55:18,238 | INFO | Graph=webkb-wisc diffusion=weighted_cascade permutation=perm_000
+2026-07-30 01:56:23,152 | INFO | Graph=webkb-wisc diffusion=weighted_cascade permutation=perm_001
+2026-07-30 01:57:47,141 | INFO | Graph=webkb-wisc diffusion=weighted_cascade permutation=perm_002
+2026-07-30 02:00:02,104 | INFO | Graph=webkb-wisc diffusion=weighted_cascade permutation=perm_003
+2026-07-30 02:00:33,236 | INFO | Graph=webkb-wisc diffusion=weighted_cascade permutation=perm_004
+2026-07-30 02:03:24,704 | INFO | Finished graph=webkb-wisc diffusion=weighted_cascade pool=150 valid_runs=5
+Completed 12 graph/diffusion job(s); 0 failure(s).
+Output index: /mnt/guanghua/Project/IM/VerifiedSearch/candidate_outputs_qwen35_9b/index.json
