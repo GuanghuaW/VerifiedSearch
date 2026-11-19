@@ -1,0 +1,13 @@
+Method,Coverage,Overall,Uniform IC,Weighted Cascade
+Random,162,0.0902,0.0559,0.1245
+Direct Qwen Single,162,0.1428,0.0700,0.2155
+Direct Qwen Multi,162,0.1540,0.0734,0.2346
+Out-Degree,162,0.1719,0.0765,0.2673
+Qwen Multi + VerifiedSearch-LLM,162,0.1747,0.0732,0.2762
+OPIM-C,162,0.1884,0.0755,0.3013
+WDD,162,0.1940,0.0796,0.3085
+WDD + VerifiedSearch-LLM,162,0.1993,0.0778,0.3208
+RR-Greedy,162,0.2202,0.0751,0.3654
+IMM-W1,162,0.2231,0.0795,0.3667
+ToupleGDD,81 (WC only),--,--,0.3060
+S2V-DQN,81 (WC only),--,--,0.1373

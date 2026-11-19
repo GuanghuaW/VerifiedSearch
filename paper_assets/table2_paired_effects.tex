@@ -1,0 +1,18 @@
+\begin{table*}[t]
+\centering
+\caption{Paired effect of verified refinement on normalized influence spread. Confidence intervals are 95\% bootstrap intervals for the mean paired difference; $p_{\mathrm{Holm}}$ denotes Holm-corrected sign-flip $p$-values.}
+\label{tab:paired_effects}
+\small
+\begin{tabular}{llrrrrrrr}
+\toprule
+Initialization & Setting & Before & After & $\Delta$ & Rel. $\Delta$ & 95\% CI & W/T/L & $p_{\mathrm{Holm}}$ \\
+\midrule
+Qwen-Multi & Overall & 0.1540 & 0.1747 & +0.0207 & +13.43\% & [0.0160, 0.0258] & 106/2/54 & <.001 \\
+Qwen-Multi & Uniform IC & 0.0734 & 0.0732 & -0.0002 & -0.25\% & [-0.0008, 0.0005] & 25/2/54 & 0.598 \\
+Qwen-Multi & Weighted Cascade & 0.2346 & 0.2762 & +0.0415 & +17.71\% & [0.0348, 0.0489] & 81/0/0 & <.001 \\
+WDD & Overall & 0.1940 & 0.1993 & +0.0053 & +2.72\% & [0.0034, 0.0077] & 82/1/79 & <.001 \\
+WDD & Uniform IC & 0.0796 & 0.0778 & -0.0018 & -2.24\% & [-0.0023, -0.0013] & 12/1/68 & <.001 \\
+WDD & Weighted Cascade & 0.3085 & 0.3208 & +0.0123 & +3.99\% & [0.0090, 0.0165] & 70/0/11 & <.001 \\
+\bottomrule
+\end{tabular}
+\end{table*}

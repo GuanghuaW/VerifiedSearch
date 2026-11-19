@@ -1,0 +1,90 @@
+
+========================================================================
+table1
+========================================================================
+                         Method     Coverage Overall Uniform IC Weighted Cascade
+                         Random          162  0.0902     0.0559           0.1245
+             Direct Qwen Single          162  0.1428     0.0700           0.2155
+              Direct Qwen Multi          162  0.1540     0.0734           0.2346
+                     Out-Degree          162  0.1719     0.0765           0.2673
+Qwen Multi + VerifiedSearch-LLM          162  0.1747     0.0732           0.2762
+                         OPIM-C          162  0.1884     0.0755           0.3013
+                            WDD          162  0.1940     0.0796           0.3085
+       WDD + VerifiedSearch-LLM          162  0.1993     0.0778           0.3208
+                      RR-Greedy          162  0.2202     0.0751           0.3654
+                         IMM-W1          162  0.2231     0.0795           0.3667
+                      ToupleGDD 81 (WC only)      --         --           0.3060
+                        S2V-DQN 81 (WC only)      --         --           0.1373
+Saved: VerifiedSearch/paper_assets/table1_main_benchmark.csv
+Saved: VerifiedSearch/paper_assets/table1_main_benchmark.tex
+
+========================================================================
+table2
+========================================================================
+Initialization          Setting Before  After   Delta Rel. Delta             95% CI    W/T/L Holm p
+    Qwen-Multi          Overall 0.1540 0.1747 +0.0207    +13.43%   [0.0160, 0.0258] 106/2/54  <.001
+    Qwen-Multi       Uniform IC 0.0734 0.0732 -0.0002     -0.25%  [-0.0008, 0.0005]  25/2/54  0.598
+    Qwen-Multi Weighted Cascade 0.2346 0.2762 +0.0415    +17.71%   [0.0348, 0.0489]   81/0/0  <.001
+           WDD          Overall 0.1940 0.1993 +0.0053     +2.72%   [0.0034, 0.0077]  82/1/79  <.001
+           WDD       Uniform IC 0.0796 0.0778 -0.0018     -2.24% [-0.0023, -0.0013]  12/1/68  <.001
+           WDD Weighted Cascade 0.3085 0.3208 +0.0123     +3.99%   [0.0090, 0.0165]  70/0/11  <.001
+Saved: VerifiedSearch/paper_assets/table2_paired_effects.csv
+Saved: VerifiedSearch/paper_assets/table2_paired_effects.tex
+
+========================================================================
+table3
+========================================================================
+     Controller Norm. Spread Raw Spread Raw Gain Verified Swaps Relative Verification
+         Random       0.1726      94.06    11.43           12.0                 13.3%
+            LLM       0.1747      95.47    12.83           12.0                 13.3%
+          Proxy       0.1749      95.59    12.95           12.0                 13.3%
+Exhaustive-Swap       0.1751      95.88    13.24           90.0                100.0%
+Saved: VerifiedSearch/paper_assets/table3_controller_analysis.csv
+Saved: VerifiedSearch/paper_assets/table3_controller_analysis.tex
+
+========================================================================
+table4
+========================================================================
+                  Method Overall Norm. Uniform IC Weighted Cascade Overall Delta vs WDD
+                     WDD        0.1940     0.0796           0.3085                   --
+      WDD + Qwen + Proxy        0.1993     0.0778           0.3208               +2.70%
+        WDD + Qwen + LLM        0.1993     0.0778           0.3208               +2.72%
+WDD + Out-Degree + Proxy        0.1993     0.0778           0.3207               +2.69%
+    WDD + Hybrid + Proxy        0.1998     0.0778           0.3217               +2.94%
+Saved: VerifiedSearch/paper_assets/table4_wdd_ablation.csv
+Saved: VerifiedSearch/paper_assets/table4_wdd_ablation.tex
+
+========================================================================
+table5
+========================================================================
+ Nodes  Edges Mean Prompt Tokens LLM Calls Candidate Gen. Time Avg. Time/Call Max Requested Tokens           Status
+ 2,000  3,000              31.6K         5             339.7 s         67.9 s                32.7K       Executable
+ 5,000  7,500              82.6K         5             514.0 s        102.8 s                83.7K       Executable
+10,000 15,000             167.6K        6*            1096.6 s        182.8 s               168.7K       Executable
+20,000 30,000             362.6K        --                  --             --               363.7K Context overflow
+Saved: VerifiedSearch/paper_assets/table5_scalability_cost.csv
+Saved: VerifiedSearch/paper_assets/table5_scalability_cost.tex
+
+========================================================================
+fig1a
+========================================================================
+Saved: VerifiedSearch/paper_assets/figure1a_qwen_verified_gain.pdf
+Saved: VerifiedSearch/paper_assets/figure1a_qwen_verified_gain.png
+
+========================================================================
+fig1b
+========================================================================
+Saved: VerifiedSearch/paper_assets/figure1b_wdd_verified_gain.pdf
+Saved: VerifiedSearch/paper_assets/figure1b_wdd_verified_gain.png
+
+========================================================================
+fig2a
+========================================================================
+Saved: VerifiedSearch/paper_assets/figure2a_scalability_quality.pdf
+Saved: VerifiedSearch/paper_assets/figure2a_scalability_quality.png
+
+========================================================================
+fig2b
+========================================================================
+Saved: VerifiedSearch/paper_assets/figure2b_context_scaling.pdf
+Saved: VerifiedSearch/paper_assets/figure2b_context_scaling.png

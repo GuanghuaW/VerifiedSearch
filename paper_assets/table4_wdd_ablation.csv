@@ -1,0 +1,6 @@
+Method,Overall Norm.,Uniform IC,Weighted Cascade,Overall Delta vs WDD
+WDD,0.1940,0.0796,0.3085,--
+WDD + Qwen + Proxy,0.1993,0.0778,0.3208,+2.70%
+WDD + Qwen + LLM,0.1993,0.0778,0.3208,+2.72%
+WDD + Out-Degree + Proxy,0.1993,0.0778,0.3207,+2.69%
+WDD + Hybrid + Proxy,0.1998,0.0778,0.3217,+2.94%

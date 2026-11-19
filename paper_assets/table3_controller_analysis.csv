@@ -1,0 +1,5 @@
+Controller,Norm. Spread,Raw Spread,Raw Gain,Verified Swaps,Relative Verification
+Random,0.1726,94.06,11.43,12.0,13.3%
+LLM,0.1747,95.47,12.83,12.0,13.3%
+Proxy,0.1749,95.59,12.95,12.0,13.3%
+Exhaustive-Swap,0.1751,95.88,13.24,90.0,100.0%
