@@ -1,0 +1,5 @@
+graph_name,num_nodes,num_edges,mean_input_tokens,max_input_tokens,max_total_tokens_requested,model_context_limit,all_fit_context,status
+scale_n2000_m3000,2000,3000,31612.0,31632,32656,262144,True,Executable
+scale_n5000_m7500,5000,7500,82610.0,82631,83655,262144,True,Executable
+scale_n10000_m15000,10000,15000,167625.0,167663,168687,262144,True,Executable
+scale_n20000_m30000,20000,30000,362606.2,362675,363699,262144,False,Context overflow

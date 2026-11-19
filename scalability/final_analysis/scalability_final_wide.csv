@@ -1,0 +1,7 @@
+paper_method,final_eval_spread_n2000,final_eval_spread_n5000,final_eval_spread_n10000,normalized_final_spread_n2000,normalized_final_spread_n5000,normalized_final_spread_n10000
+Direct Qwen Multi,731.8,1063.0,1542.0,0.3659,0.2126,0.1542
+IMM-W1,976.8,1953.0,3009.0,0.4884,0.3906,0.3009
+RR-Greedy,981.0,1936.0,2952.0,0.4905,0.3872,0.2952
+WDD,825.2,1627.0,2260.0,0.4126,0.3254,0.226
+WDD + VerifiedSearch-LLM,843.6,1592.5,2280.0,0.4218,0.3185,0.228
+WDD + VerifiedSearch-Proxy,843.6,1616.0,2288.0,0.4218,0.3232,0.2288

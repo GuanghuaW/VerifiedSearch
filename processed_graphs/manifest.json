@@ -1,0 +1,525 @@
+{
+  "synthetic_dir": "sdata",
+  "real_dir": "ndata",
+  "output_dir": "VerifiedSearch/processed_graphs",
+  "num_permutations": 5,
+  "permutation_seed": 2026,
+  "graphs": [
+    {
+      "name": "graph_n1000_m1500",
+      "dataset_type": "synthetic",
+      "source_file": "sdata/graph_n1000_m1500.json",
+      "processed_file": "VerifiedSearch/processed_graphs/synthetic/graph_n1000_m1500/graph.json",
+      "adjacency_file": "VerifiedSearch/processed_graphs/synthetic/graph_n1000_m1500/adjacency.txt",
+      "num_nodes": 1000,
+      "num_edges": 1500,
+      "density": 0.0015015015015015015,
+      "isolated_nodes": 49,
+      "warnings": [],
+      "permutation_files": [
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1000_m1500/permutations/perm_000.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1000_m1500/permutations/perm_001.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1000_m1500/permutations/perm_002.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1000_m1500/permutations/perm_003.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1000_m1500/permutations/perm_004.json"
+      ]
+    },
+    {
+      "name": "graph_n100_m150",
+      "dataset_type": "synthetic",
+      "source_file": "sdata/graph_n100_m150.json",
+      "processed_file": "VerifiedSearch/processed_graphs/synthetic/graph_n100_m150/graph.json",
+      "adjacency_file": "VerifiedSearch/processed_graphs/synthetic/graph_n100_m150/adjacency.txt",
+      "num_nodes": 100,
+      "num_edges": 150,
+      "density": 0.015151515151515152,
+      "isolated_nodes": 3,
+      "warnings": [],
+      "permutation_files": [
+        "VerifiedSearch/processed_graphs/synthetic/graph_n100_m150/permutations/perm_000.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n100_m150/permutations/perm_001.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n100_m150/permutations/perm_002.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n100_m150/permutations/perm_003.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n100_m150/permutations/perm_004.json"
+      ]
+    },
+    {
+      "name": "graph_n1100_m1650",
+      "dataset_type": "synthetic",
+      "source_file": "sdata/graph_n1100_m1650.json",
+      "processed_file": "VerifiedSearch/processed_graphs/synthetic/graph_n1100_m1650/graph.json",
+      "adjacency_file": "VerifiedSearch/processed_graphs/synthetic/graph_n1100_m1650/adjacency.txt",
+      "num_nodes": 1100,
+      "num_edges": 1650,
+      "density": 0.001364877161055505,
+      "isolated_nodes": 47,
+      "warnings": [],
+      "permutation_files": [
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1100_m1650/permutations/perm_000.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1100_m1650/permutations/perm_001.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1100_m1650/permutations/perm_002.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1100_m1650/permutations/perm_003.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1100_m1650/permutations/perm_004.json"
+      ]
+    },
+    {
+      "name": "graph_n1200_m1800",
+      "dataset_type": "synthetic",
+      "source_file": "sdata/graph_n1200_m1800.json",
+      "processed_file": "VerifiedSearch/processed_graphs/synthetic/graph_n1200_m1800/graph.json",
+      "adjacency_file": "VerifiedSearch/processed_graphs/synthetic/graph_n1200_m1800/adjacency.txt",
+      "num_nodes": 1200,
+      "num_edges": 1800,
+      "density": 0.0012510425354462051,
+      "isolated_nodes": 67,
+      "warnings": [],
+      "permutation_files": [
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1200_m1800/permutations/perm_000.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1200_m1800/permutations/perm_001.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1200_m1800/permutations/perm_002.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1200_m1800/permutations/perm_003.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1200_m1800/permutations/perm_004.json"
+      ]
+    },
+    {
+      "name": "graph_n1300_m1950",
+      "dataset_type": "synthetic",
+      "source_file": "sdata/graph_n1300_m1950.json",
+      "processed_file": "VerifiedSearch/processed_graphs/synthetic/graph_n1300_m1950/graph.json",
+      "adjacency_file": "VerifiedSearch/processed_graphs/synthetic/graph_n1300_m1950/adjacency.txt",
+      "num_nodes": 1300,
+      "num_edges": 1950,
+      "density": 0.0011547344110854503,
+      "isolated_nodes": 62,
+      "warnings": [],
+      "permutation_files": [
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1300_m1950/permutations/perm_000.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1300_m1950/permutations/perm_001.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1300_m1950/permutations/perm_002.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1300_m1950/permutations/perm_003.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1300_m1950/permutations/perm_004.json"
+      ]
+    },
+    {
+      "name": "graph_n1400_m2100",
+      "dataset_type": "synthetic",
+      "source_file": "sdata/graph_n1400_m2100.json",
+      "processed_file": "VerifiedSearch/processed_graphs/synthetic/graph_n1400_m2100/graph.json",
+      "adjacency_file": "VerifiedSearch/processed_graphs/synthetic/graph_n1400_m2100/adjacency.txt",
+      "num_nodes": 1400,
+      "num_edges": 2100,
+      "density": 0.001072194424588992,
+      "isolated_nodes": 60,
+      "warnings": [],
+      "permutation_files": [
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1400_m2100/permutations/perm_000.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1400_m2100/permutations/perm_001.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1400_m2100/permutations/perm_002.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1400_m2100/permutations/perm_003.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1400_m2100/permutations/perm_004.json"
+      ]
+    },
+    {
+      "name": "graph_n1500_m2250",
+      "dataset_type": "synthetic",
+      "source_file": "sdata/graph_n1500_m2250.json",
+      "processed_file": "VerifiedSearch/processed_graphs/synthetic/graph_n1500_m2250/graph.json",
+      "adjacency_file": "VerifiedSearch/processed_graphs/synthetic/graph_n1500_m2250/adjacency.txt",
+      "num_nodes": 1500,
+      "num_edges": 2250,
+      "density": 0.0010006671114076052,
+      "isolated_nodes": 65,
+      "warnings": [],
+      "permutation_files": [
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1500_m2250/permutations/perm_000.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1500_m2250/permutations/perm_001.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1500_m2250/permutations/perm_002.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1500_m2250/permutations/perm_003.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1500_m2250/permutations/perm_004.json"
+      ]
+    },
+    {
+      "name": "graph_n1600_m2400",
+      "dataset_type": "synthetic",
+      "source_file": "sdata/graph_n1600_m2400.json",
+      "processed_file": "VerifiedSearch/processed_graphs/synthetic/graph_n1600_m2400/graph.json",
+      "adjacency_file": "VerifiedSearch/processed_graphs/synthetic/graph_n1600_m2400/adjacency.txt",
+      "num_nodes": 1600,
+      "num_edges": 2400,
+      "density": 0.0009380863039399625,
+      "isolated_nodes": 87,
+      "warnings": [],
+      "permutation_files": [
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1600_m2400/permutations/perm_000.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1600_m2400/permutations/perm_001.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1600_m2400/permutations/perm_002.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1600_m2400/permutations/perm_003.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1600_m2400/permutations/perm_004.json"
+      ]
+    },
+    {
+      "name": "graph_n1700_m2550",
+      "dataset_type": "synthetic",
+      "source_file": "sdata/graph_n1700_m2550.json",
+      "processed_file": "VerifiedSearch/processed_graphs/synthetic/graph_n1700_m2550/graph.json",
+      "adjacency_file": "VerifiedSearch/processed_graphs/synthetic/graph_n1700_m2550/adjacency.txt",
+      "num_nodes": 1700,
+      "num_edges": 2550,
+      "density": 0.0008828722778104767,
+      "isolated_nodes": 84,
+      "warnings": [],
+      "permutation_files": [
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1700_m2550/permutations/perm_000.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1700_m2550/permutations/perm_001.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1700_m2550/permutations/perm_002.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1700_m2550/permutations/perm_003.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1700_m2550/permutations/perm_004.json"
+      ]
+    },
+    {
+      "name": "graph_n1800_m2700",
+      "dataset_type": "synthetic",
+      "source_file": "sdata/graph_n1800_m2700.json",
+      "processed_file": "VerifiedSearch/processed_graphs/synthetic/graph_n1800_m2700/graph.json",
+      "adjacency_file": "VerifiedSearch/processed_graphs/synthetic/graph_n1800_m2700/adjacency.txt",
+      "num_nodes": 1800,
+      "num_edges": 2700,
+      "density": 0.0008337965536409116,
+      "isolated_nodes": 93,
+      "warnings": [],
+      "permutation_files": [
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1800_m2700/permutations/perm_000.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1800_m2700/permutations/perm_001.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1800_m2700/permutations/perm_002.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1800_m2700/permutations/perm_003.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1800_m2700/permutations/perm_004.json"
+      ]
+    },
+    {
+      "name": "graph_n1900_m2850",
+      "dataset_type": "synthetic",
+      "source_file": "sdata/graph_n1900_m2850.json",
+      "processed_file": "VerifiedSearch/processed_graphs/synthetic/graph_n1900_m2850/graph.json",
+      "adjacency_file": "VerifiedSearch/processed_graphs/synthetic/graph_n1900_m2850/adjacency.txt",
+      "num_nodes": 1900,
+      "num_edges": 2850,
+      "density": 0.0007898894154818325,
+      "isolated_nodes": 94,
+      "warnings": [],
+      "permutation_files": [
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1900_m2850/permutations/perm_000.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1900_m2850/permutations/perm_001.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1900_m2850/permutations/perm_002.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1900_m2850/permutations/perm_003.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n1900_m2850/permutations/perm_004.json"
+      ]
+    },
+    {
+      "name": "graph_n2000_m3000",
+      "dataset_type": "synthetic",
+      "source_file": "sdata/graph_n2000_m3000.json",
+      "processed_file": "VerifiedSearch/processed_graphs/synthetic/graph_n2000_m3000/graph.json",
+      "adjacency_file": "VerifiedSearch/processed_graphs/synthetic/graph_n2000_m3000/adjacency.txt",
+      "num_nodes": 2000,
+      "num_edges": 3000,
+      "density": 0.0007503751875937969,
+      "isolated_nodes": 82,
+      "warnings": [],
+      "permutation_files": [
+        "VerifiedSearch/processed_graphs/synthetic/graph_n2000_m3000/permutations/perm_000.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n2000_m3000/permutations/perm_001.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n2000_m3000/permutations/perm_002.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n2000_m3000/permutations/perm_003.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n2000_m3000/permutations/perm_004.json"
+      ]
+    },
+    {
+      "name": "graph_n200_m300",
+      "dataset_type": "synthetic",
+      "source_file": "sdata/graph_n200_m300.json",
+      "processed_file": "VerifiedSearch/processed_graphs/synthetic/graph_n200_m300/graph.json",
+      "adjacency_file": "VerifiedSearch/processed_graphs/synthetic/graph_n200_m300/adjacency.txt",
+      "num_nodes": 200,
+      "num_edges": 300,
+      "density": 0.007537688442211055,
+      "isolated_nodes": 10,
+      "warnings": [],
+      "permutation_files": [
+        "VerifiedSearch/processed_graphs/synthetic/graph_n200_m300/permutations/perm_000.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n200_m300/permutations/perm_001.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n200_m300/permutations/perm_002.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n200_m300/permutations/perm_003.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n200_m300/permutations/perm_004.json"
+      ]
+    },
+    {
+      "name": "graph_n300_m450",
+      "dataset_type": "synthetic",
+      "source_file": "sdata/graph_n300_m450.json",
+      "processed_file": "VerifiedSearch/processed_graphs/synthetic/graph_n300_m450/graph.json",
+      "adjacency_file": "VerifiedSearch/processed_graphs/synthetic/graph_n300_m450/adjacency.txt",
+      "num_nodes": 300,
+      "num_edges": 450,
+      "density": 0.005016722408026756,
+      "isolated_nodes": 19,
+      "warnings": [],
+      "permutation_files": [
+        "VerifiedSearch/processed_graphs/synthetic/graph_n300_m450/permutations/perm_000.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n300_m450/permutations/perm_001.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n300_m450/permutations/perm_002.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n300_m450/permutations/perm_003.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n300_m450/permutations/perm_004.json"
+      ]
+    },
+    {
+      "name": "graph_n400_m600",
+      "dataset_type": "synthetic",
+      "source_file": "sdata/graph_n400_m600.json",
+      "processed_file": "VerifiedSearch/processed_graphs/synthetic/graph_n400_m600/graph.json",
+      "adjacency_file": "VerifiedSearch/processed_graphs/synthetic/graph_n400_m600/adjacency.txt",
+      "num_nodes": 400,
+      "num_edges": 600,
+      "density": 0.0037593984962406013,
+      "isolated_nodes": 18,
+      "warnings": [],
+      "permutation_files": [
+        "VerifiedSearch/processed_graphs/synthetic/graph_n400_m600/permutations/perm_000.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n400_m600/permutations/perm_001.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n400_m600/permutations/perm_002.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n400_m600/permutations/perm_003.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n400_m600/permutations/perm_004.json"
+      ]
+    },
+    {
+      "name": "graph_n500_m750",
+      "dataset_type": "synthetic",
+      "source_file": "sdata/graph_n500_m750.json",
+      "processed_file": "VerifiedSearch/processed_graphs/synthetic/graph_n500_m750/graph.json",
+      "adjacency_file": "VerifiedSearch/processed_graphs/synthetic/graph_n500_m750/adjacency.txt",
+      "num_nodes": 500,
+      "num_edges": 750,
+      "density": 0.003006012024048096,
+      "isolated_nodes": 20,
+      "warnings": [],
+      "permutation_files": [
+        "VerifiedSearch/processed_graphs/synthetic/graph_n500_m750/permutations/perm_000.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n500_m750/permutations/perm_001.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n500_m750/permutations/perm_002.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n500_m750/permutations/perm_003.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n500_m750/permutations/perm_004.json"
+      ]
+    },
+    {
+      "name": "graph_n600_m900",
+      "dataset_type": "synthetic",
+      "source_file": "sdata/graph_n600_m900.json",
+      "processed_file": "VerifiedSearch/processed_graphs/synthetic/graph_n600_m900/graph.json",
+      "adjacency_file": "VerifiedSearch/processed_graphs/synthetic/graph_n600_m900/adjacency.txt",
+      "num_nodes": 600,
+      "num_edges": 900,
+      "density": 0.0025041736227045075,
+      "isolated_nodes": 30,
+      "warnings": [],
+      "permutation_files": [
+        "VerifiedSearch/processed_graphs/synthetic/graph_n600_m900/permutations/perm_000.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n600_m900/permutations/perm_001.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n600_m900/permutations/perm_002.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n600_m900/permutations/perm_003.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n600_m900/permutations/perm_004.json"
+      ]
+    },
+    {
+      "name": "graph_n700_m1050",
+      "dataset_type": "synthetic",
+      "source_file": "sdata/graph_n700_m1050.json",
+      "processed_file": "VerifiedSearch/processed_graphs/synthetic/graph_n700_m1050/graph.json",
+      "adjacency_file": "VerifiedSearch/processed_graphs/synthetic/graph_n700_m1050/adjacency.txt",
+      "num_nodes": 700,
+      "num_edges": 1050,
+      "density": 0.002145922746781116,
+      "isolated_nodes": 36,
+      "warnings": [],
+      "permutation_files": [
+        "VerifiedSearch/processed_graphs/synthetic/graph_n700_m1050/permutations/perm_000.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n700_m1050/permutations/perm_001.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n700_m1050/permutations/perm_002.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n700_m1050/permutations/perm_003.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n700_m1050/permutations/perm_004.json"
+      ]
+    },
+    {
+      "name": "graph_n800_m1200",
+      "dataset_type": "synthetic",
+      "source_file": "sdata/graph_n800_m1200.json",
+      "processed_file": "VerifiedSearch/processed_graphs/synthetic/graph_n800_m1200/graph.json",
+      "adjacency_file": "VerifiedSearch/processed_graphs/synthetic/graph_n800_m1200/adjacency.txt",
+      "num_nodes": 800,
+      "num_edges": 1200,
+      "density": 0.0018773466833541927,
+      "isolated_nodes": 42,
+      "warnings": [],
+      "permutation_files": [
+        "VerifiedSearch/processed_graphs/synthetic/graph_n800_m1200/permutations/perm_000.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n800_m1200/permutations/perm_001.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n800_m1200/permutations/perm_002.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n800_m1200/permutations/perm_003.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n800_m1200/permutations/perm_004.json"
+      ]
+    },
+    {
+      "name": "graph_n900_m1350",
+      "dataset_type": "synthetic",
+      "source_file": "sdata/graph_n900_m1350.json",
+      "processed_file": "VerifiedSearch/processed_graphs/synthetic/graph_n900_m1350/graph.json",
+      "adjacency_file": "VerifiedSearch/processed_graphs/synthetic/graph_n900_m1350/adjacency.txt",
+      "num_nodes": 900,
+      "num_edges": 1350,
+      "density": 0.0016685205784204673,
+      "isolated_nodes": 51,
+      "warnings": [],
+      "permutation_files": [
+        "VerifiedSearch/processed_graphs/synthetic/graph_n900_m1350/permutations/perm_000.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n900_m1350/permutations/perm_001.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n900_m1350/permutations/perm_002.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n900_m1350/permutations/perm_003.json",
+        "VerifiedSearch/processed_graphs/synthetic/graph_n900_m1350/permutations/perm_004.json"
+      ]
+    },
+    {
+      "name": "ENZYMES_g297",
+      "dataset_type": "real",
+      "source_file": "ndata/ENZYMES_g297.edges",
+      "processed_file": "VerifiedSearch/processed_graphs/real/ENZYMES_g297/graph.json",
+      "adjacency_file": "VerifiedSearch/processed_graphs/real/ENZYMES_g297/adjacency.txt",
+      "num_nodes": 121,
+      "num_edges": 298,
+      "density": 0.020523415977961434,
+      "isolated_nodes": 0,
+      "warnings": [],
+      "permutation_files": [
+        "VerifiedSearch/processed_graphs/real/ENZYMES_g297/permutations/perm_000.json",
+        "VerifiedSearch/processed_graphs/real/ENZYMES_g297/permutations/perm_001.json",
+        "VerifiedSearch/processed_graphs/real/ENZYMES_g297/permutations/perm_002.json",
+        "VerifiedSearch/processed_graphs/real/ENZYMES_g297/permutations/perm_003.json",
+        "VerifiedSearch/processed_graphs/real/ENZYMES_g297/permutations/perm_004.json"
+      ]
+    },
+    {
+      "name": "bio-CE-LC",
+      "dataset_type": "real",
+      "source_file": "ndata/bio-CE-LC.edges",
+      "processed_file": "VerifiedSearch/processed_graphs/real/bio-CE-LC/graph.json",
+      "adjacency_file": "VerifiedSearch/processed_graphs/real/bio-CE-LC/adjacency.txt",
+      "num_nodes": 1387,
+      "num_edges": 1648,
+      "density": 0.000857269783008788,
+      "isolated_nodes": 0,
+      "warnings": [
+        "Header declares 1386 nodes, but 1387 node labels were observed after parsing. The observed node set is used."
+      ],
+      "permutation_files": [
+        "VerifiedSearch/processed_graphs/real/bio-CE-LC/permutations/perm_000.json",
+        "VerifiedSearch/processed_graphs/real/bio-CE-LC/permutations/perm_001.json",
+        "VerifiedSearch/processed_graphs/real/bio-CE-LC/permutations/perm_002.json",
+        "VerifiedSearch/processed_graphs/real/bio-CE-LC/permutations/perm_003.json",
+        "VerifiedSearch/processed_graphs/real/bio-CE-LC/permutations/perm_004.json"
+      ]
+    },
+    {
+      "name": "bn-mouse-kasthuri_graph_v4",
+      "dataset_type": "real",
+      "source_file": "ndata/bn-mouse-kasthuri_graph_v4.edges",
+      "processed_file": "VerifiedSearch/processed_graphs/real/bn-mouse-kasthuri_graph_v4/graph.json",
+      "adjacency_file": "VerifiedSearch/processed_graphs/real/bn-mouse-kasthuri_graph_v4/adjacency.txt",
+      "num_nodes": 1029,
+      "num_edges": 1559,
+      "density": 0.0014737968561521328,
+      "isolated_nodes": 0,
+      "warnings": [],
+      "permutation_files": [
+        "VerifiedSearch/processed_graphs/real/bn-mouse-kasthuri_graph_v4/permutations/perm_000.json",
+        "VerifiedSearch/processed_graphs/real/bn-mouse-kasthuri_graph_v4/permutations/perm_001.json",
+        "VerifiedSearch/processed_graphs/real/bn-mouse-kasthuri_graph_v4/permutations/perm_002.json",
+        "VerifiedSearch/processed_graphs/real/bn-mouse-kasthuri_graph_v4/permutations/perm_003.json",
+        "VerifiedSearch/processed_graphs/real/bn-mouse-kasthuri_graph_v4/permutations/perm_004.json"
+      ]
+    },
+    {
+      "name": "email-enron-only",
+      "dataset_type": "real",
+      "source_file": "ndata/email-enron-only.edges",
+      "processed_file": "VerifiedSearch/processed_graphs/real/email-enron-only/graph.json",
+      "adjacency_file": "VerifiedSearch/processed_graphs/real/email-enron-only/adjacency.txt",
+      "num_nodes": 143,
+      "num_edges": 623,
+      "density": 0.030680587018615188,
+      "isolated_nodes": 0,
+      "warnings": [],
+      "permutation_files": [
+        "VerifiedSearch/processed_graphs/real/email-enron-only/permutations/perm_000.json",
+        "VerifiedSearch/processed_graphs/real/email-enron-only/permutations/perm_001.json",
+        "VerifiedSearch/processed_graphs/real/email-enron-only/permutations/perm_002.json",
+        "VerifiedSearch/processed_graphs/real/email-enron-only/permutations/perm_003.json",
+        "VerifiedSearch/processed_graphs/real/email-enron-only/permutations/perm_004.json"
+      ]
+    },
+    {
+      "name": "gene",
+      "dataset_type": "real",
+      "source_file": "ndata/gene.edges",
+      "processed_file": "VerifiedSearch/processed_graphs/real/gene/graph.json",
+      "adjacency_file": "VerifiedSearch/processed_graphs/real/gene/adjacency.txt",
+      "num_nodes": 1103,
+      "num_edges": 1672,
+      "density": 0.0013755588207709382,
+      "isolated_nodes": 0,
+      "warnings": [],
+      "permutation_files": [
+        "VerifiedSearch/processed_graphs/real/gene/permutations/perm_000.json",
+        "VerifiedSearch/processed_graphs/real/gene/permutations/perm_001.json",
+        "VerifiedSearch/processed_graphs/real/gene/permutations/perm_002.json",
+        "VerifiedSearch/processed_graphs/real/gene/permutations/perm_003.json",
+        "VerifiedSearch/processed_graphs/real/gene/permutations/perm_004.json"
+      ]
+    },
+    {
+      "name": "internet-industry-partnerships",
+      "dataset_type": "real",
+      "source_file": "ndata/internet-industry-partnerships.edges",
+      "processed_file": "VerifiedSearch/processed_graphs/real/internet-industry-partnerships/graph.json",
+      "adjacency_file": "VerifiedSearch/processed_graphs/real/internet-industry-partnerships/adjacency.txt",
+      "num_nodes": 219,
+      "num_edges": 630,
+      "density": 0.013195928113610656,
+      "isolated_nodes": 0,
+      "warnings": [],
+      "permutation_files": [
+        "VerifiedSearch/processed_graphs/real/internet-industry-partnerships/permutations/perm_000.json",
+        "VerifiedSearch/processed_graphs/real/internet-industry-partnerships/permutations/perm_001.json",
+        "VerifiedSearch/processed_graphs/real/internet-industry-partnerships/permutations/perm_002.json",
+        "VerifiedSearch/processed_graphs/real/internet-industry-partnerships/permutations/perm_003.json",
+        "VerifiedSearch/processed_graphs/real/internet-industry-partnerships/permutations/perm_004.json"
+      ]
+    },
+    {
+      "name": "webkb-wisc",
+      "dataset_type": "real",
+      "source_file": "ndata/webkb-wisc.edges",
+      "processed_file": "VerifiedSearch/processed_graphs/real/webkb-wisc/graph.json",
+      "adjacency_file": "VerifiedSearch/processed_graphs/real/webkb-wisc/adjacency.txt",
+      "num_nodes": 266,
+      "num_edges": 511,
+      "density": 0.007249255213505462,
+      "isolated_nodes": 3,
+      "warnings": [],
+      "permutation_files": [
+        "VerifiedSearch/processed_graphs/real/webkb-wisc/permutations/perm_000.json",
+        "VerifiedSearch/processed_graphs/real/webkb-wisc/permutations/perm_001.json",
+        "VerifiedSearch/processed_graphs/real/webkb-wisc/permutations/perm_002.json",
+        "VerifiedSearch/processed_graphs/real/webkb-wisc/permutations/perm_003.json",
+        "VerifiedSearch/processed_graphs/real/webkb-wisc/permutations/perm_004.json"
+      ]
+    }
+  ],
+  "failures": []
+}
